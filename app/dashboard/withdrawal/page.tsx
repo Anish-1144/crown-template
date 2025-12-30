@@ -103,7 +103,7 @@ export default function WithdrawalPage() {
     .reduce((sum, item) => sum + parseFloat(item.amount.replace("$", "").replace(",", "")), 0);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div>
       {/* Header */}
       <DashboardHeader 
         title="Withdraw Your Funds"
@@ -473,4 +473,3 @@ export default function WithdrawalPage() {
     </div>
   );
 }
-

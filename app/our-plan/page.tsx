@@ -932,4 +932,3 @@ export default function OurPlanPage() {
     </main>
   );
 }
-

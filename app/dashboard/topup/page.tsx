@@ -102,7 +102,7 @@ export default function TopupPage() {
   const selectedPackageData = packages.find((p) => p.id === selectedPackage);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div>
       {/* Header */}
       <DashboardHeader 
         title="Topup"
@@ -373,4 +373,3 @@ export default function TopupPage() {
     </div>
   );
 }
-

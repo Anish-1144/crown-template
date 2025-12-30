@@ -86,16 +86,18 @@ const menuItems: MenuItem[] = [
 
 export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
   const pathname = usePathname();
-  
+
   // Track which sub-menus are open
   const [openSubMenus, setOpenSubMenus] = useState<Record<string, boolean>>({});
-  
+
   // Initialize sub-menu states based on current pathname
   useEffect(() => {
     const newOpenSubMenus: Record<string, boolean> = {};
     menuItems.forEach((item) => {
       if (item.subItems) {
-        newOpenSubMenus[item.name] = item.subItems.some(sub => pathname === sub.href);
+        newOpenSubMenus[item.name] = item.subItems.some(
+          (sub) => pathname === sub.href
+        );
       }
     });
     setOpenSubMenus(newOpenSubMenus);
@@ -114,15 +116,17 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
       {/* Sidebar */}
       <aside
         className={`fixed left-0 top-0 h-full shadow-lg z-50 transition-all duration-300 ${
-          isOpen ? "w-64" : "w-20"
+          isOpen ? "w-56" : "w-20"
         }`}
-        style={{ 
+        style={{
           backgroundColor: "#042B19",
-          borderRight: "1px solid rgba(255, 255, 255, 0.1)"
         }}
       >
         {/* Sidebar Header with Logo and Toggle */}
-        <div className="flex items-center justify-between p-4 border-b" style={{ borderColor: "rgba(255, 255, 255, 0.1)" }}>
+        <div
+          className="flex items-center justify-between p-4 border-b"
+          style={{ borderColor: "rgba(255, 255, 255, 0.1)" }}
+        >
           <Link href="/dashboard" className="flex items-center gap-3 flex-1">
             <div className="w-10 h-10 rounded-lg flex items-center justify-center shadow-md p-2 bg-white flex-shrink-0">
               <Image
@@ -157,7 +161,10 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
           <ul className="space-y-1 px-2">
             {menuItems.map((item) => {
               const Icon = item.icon;
-              const isActive = pathname === item.href || (item.subItems && item.subItems.some(sub => pathname === sub.href));
+              const isActive =
+                pathname === item.href ||
+                (item.subItems &&
+                  item.subItems.some((sub) => pathname === sub.href));
               const isSubMenuOpen = openSubMenus[item.name] || false;
 
               return (
@@ -168,29 +175,32 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
                       onClick={(e) => {
                         if (item.subItems) {
                           e.preventDefault();
-                          setOpenSubMenus(prev => ({
+                          setOpenSubMenus((prev) => ({
                             ...prev,
-                            [item.name]: !prev[item.name]
+                            [item.name]: !prev[item.name],
                           }));
                         }
                       }}
-                      className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all ${
+                      className={`flex items-center gap-3 px-3 py-2.5 transition-all ${
                         isActive
-                          ? "font-semibold"
-                          : "hover:bg-white hover:bg-opacity-10"
+                          ? "font-semibold rounded-3xl"
+                          : "rounded-lg hover:bg-white hover:bg-opacity-10"
                       }`}
                       style={{
-                        backgroundColor: isActive ? "rgba(255, 255, 255, 0.15)" : "transparent",
-                        color: isActive ? "#ffffff" : "rgba(255, 255, 255, 0.8)",
+                        backgroundColor: isActive
+                          ? "rgba(255, 255, 255, 0.15)"
+                          : "transparent",
+                        color: isActive
+                          ? "#ffffff"
+                          : "rgba(255, 255, 255, 0.8)",
                       }}
                     >
-                      <Icon
-                        className="flex-shrink-0 text-white"
-                        size={20}
-                      />
+                      <Icon className="flex-shrink-0 text-white" size={20} />
                       {isOpen && (
                         <>
-                          <span className="text-sm text-white flex-1">{item.name}</span>
+                          <span className="text-sm text-white flex-1">
+                            {item.name}
+                          </span>
                           {item.subItems && (
                             <ChevronRight
                               className={`w-4 h-4 transition-transform duration-200 ${
@@ -209,14 +219,18 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
                             <li key={subItem.name}>
                               <Link
                                 href={subItem.href}
-                                className={`block px-3 py-2 rounded-lg transition-all text-sm ${
+                                className={`block px-3 py-2 transition-all text-sm ${
                                   isSubActive
-                                    ? "font-semibold"
-                                    : "hover:bg-white hover:bg-opacity-10"
+                                    ? "font-semibold rounded-3xl"
+                                    : "rounded-lg hover:bg-white hover:bg-opacity-10"
                                 }`}
                                 style={{
-                                  backgroundColor: isSubActive ? "rgba(255, 255, 255, 0.15)" : "transparent",
-                                  color: isSubActive ? "#ffffff" : "rgba(255, 255, 255, 0.7)",
+                                  backgroundColor: isSubActive
+                                    ? "rgba(255, 255, 255, 0.15)"
+                                    : "transparent",
+                                  color: isSubActive
+                                    ? "#ffffff"
+                                    : "rgba(255, 255, 255, 0.7)",
                                 }}
                               >
                                 {subItem.name}
@@ -234,41 +248,69 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
         </nav>
 
         {/* User Profile Section */}
-        <div className="px-4 py-2 border-t" style={{ borderColor: "rgba(255, 255, 255, 0.1)" }}>
+        <div
+          className="px-2 py-2 border-t"
+          style={{ borderColor: "rgba(255, 255, 255, 0.1)" }}
+        >
           {isOpen ? (
-            <div className="bg-white rounded-lg p-4 space-y-3">
+            <div className="bg-white rounded-2xl p-4 space-y-3">
               {/* User Info */}
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#042B19] to-[#16a34a] flex items-center justify-center shadow-md flex-shrink-0">
                   <span className="text-lg font-bold text-white">A</span>
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-base font-semibold truncate" style={{ color: "#042B19" }}>
+                  <p
+                    className="text-base font-semibold truncate"
+                    style={{ color: "#042B19" }}
+                  >
                     Andrew
                   </p>
                   <div className="flex items-center gap-2 mt-1">
-                    <span className="text-xs font-medium text-gray-500">Code:</span>
-                    <span className="text-xs font-semibold px-2 py-0.5 rounded" style={{ backgroundColor: "#E8F5F0", color: "#042B19" }}>
+                    <span
+                      className="text-xs font-semibold px-2 py-0.5 rounded"
+                      style={{ backgroundColor: "#E8F5F0", color: "#042B19" }}
+                    >
                       CNB3298618
                     </span>
                   </div>
+                  <div className="mt-2">
+                    <p className="text-xs text-gray-600">
+                      Rank:{" "}
+                      <span
+                        className="font-semibold"
+                        style={{ color: "#042B19" }}
+                      >
+                        981
+                      </span>
+                    </p>
+                  </div>
                 </div>
               </div>
-              
+
               {/* My Package */}
               <div className="pt-2 border-t" style={{ borderColor: "#E5E7EB" }}>
                 <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-2">
                   My Package
                 </p>
-                <div className="px-3 py-2 rounded-lg font-semibold text-sm text-center" style={{ backgroundColor: "#ffcf0B", color: "#042B19" }}>
+                <div
+                  className="px-3 py-2 rounded-3xl font-semibold text-sm text-center"
+                  style={{ backgroundColor: "#ffcf0B", color: "#042B19" }}
+                >
                   Elite Energy
                 </div>
               </div>
-              
+
               {/* Logout Button */}
               <button
-                className="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition text-sm font-medium mt-2"
-                style={{ color: "#042B19" }}
+                className="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-3xl transition text-sm font-medium mt-2"
+                style={{ backgroundColor: "#ef4444", color: "#ffffff" }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = "#dc2626";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = "#ef4444";
+                }}
               >
                 <span>Logout</span>
                 <ChevronRight className="w-4 h-4" />
@@ -286,4 +328,3 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
     </>
   );
 }
-

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Download, RefreshCw, ChevronLeft, ChevronRight, Search } from "lucide-react";
+import { Download, RefreshCw, ChevronLeft, ChevronRight, Search, Wallet } from "lucide-react";
 
 export default function WithdrawalReportPage() {
   const [entriesPerPage, setEntriesPerPage] = useState("10");
@@ -59,7 +59,7 @@ export default function WithdrawalReportPage() {
     .reduce((sum, item) => sum + parseFloat(item.amount.replace("$", "").replace(",", "")), 0);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div>
       {/* Header */}
       <header className="bg-white shadow-sm border-b" style={{ borderColor: "#E5E7EB" }}>
         <div className="px-6 py-6">
@@ -272,4 +272,3 @@ export default function WithdrawalReportPage() {
     </div>
   );
 }
-

@@ -66,7 +66,7 @@ export default function FundConvertPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div>
       {/* Header */}
       <header className="bg-white shadow-sm border-b" style={{ borderColor: "#E5E7EB" }}>
         <div className="px-6 py-6">
@@ -326,4 +326,3 @@ export default function FundConvertPage() {
     </div>
   );
 }
-

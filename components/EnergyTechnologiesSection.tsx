@@ -322,8 +322,8 @@ export default function EnergyTechnologiesSection() {
             >
               Invenergy is flexible in meeting your energy needs with a
               portfolio of proven and emerging technologies that capture, make,
-              store and move energy at scale. We'll work with you to pinpoint
-              the best solution, whether it's a single source or combination of
+              store and move energy at scale. We&apos;ll work with you to pinpoint
+              the best solution, whether it&apos;s a single source or combination of
               technologies.
             </p>
 

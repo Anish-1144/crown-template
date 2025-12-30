@@ -1,7 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { Users, TrendingUp, DollarSign, ArrowRight, ArrowLeft } from "lucide-react";
+import {
+  Users,
+  TrendingUp,
+  DollarSign,
+  ArrowRight,
+  ArrowLeft,
+} from "lucide-react";
 
 export default function BinaryGenealogyPage() {
   const [activeTab, setActiveTab] = useState("tree");
@@ -138,8 +144,16 @@ export default function BinaryGenealogyPage() {
   ];
 
   // Calculate totals
-  const leftTotal = leftMembers.reduce((sum, member) => sum + parseFloat(member.totalBusiness.replace("$", "").replace(",", "")), 0);
-  const rightTotal = rightMembers.reduce((sum, member) => sum + parseFloat(member.totalBusiness.replace("$", "").replace(",", "")), 0);
+  const leftTotal = leftMembers.reduce(
+    (sum, member) =>
+      sum + parseFloat(member.totalBusiness.replace("$", "").replace(",", "")),
+    0
+  );
+  const rightTotal = rightMembers.reduce(
+    (sum, member) =>
+      sum + parseFloat(member.totalBusiness.replace("$", "").replace(",", "")),
+    0
+  );
   const lesserLeg = Math.min(leftTotal, rightTotal);
 
   // Binary Tree Node Component
@@ -155,7 +169,10 @@ export default function BinaryGenealogyPage() {
             borderWidth: level === 0 ? "2px" : "1px",
           }}
         >
-          <p className="text-xs font-semibold mb-1" style={{ color: "#042B19" }}>
+          <p
+            className="text-xs font-semibold mb-1"
+            style={{ color: "#042B19" }}
+          >
             {node.name}
           </p>
           <p className="text-xs text-gray-500">{node.id}</p>
@@ -188,9 +205,12 @@ export default function BinaryGenealogyPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div>
       {/* Header */}
-      <header className="bg-white shadow-sm border-b" style={{ borderColor: "#E5E7EB" }}>
+      <header
+        className="bg-white shadow-sm border-b"
+        style={{ borderColor: "#E5E7EB" }}
+      >
         <div className="px-6 py-6">
           <h1 className="text-3xl font-bold mb-2" style={{ color: "#042B19" }}>
             Binary Genealogy
@@ -204,19 +224,21 @@ export default function BinaryGenealogyPage() {
       {/* Main Content */}
       <main className="p-6">
         {/* Tabs */}
-        <div className="bg-white rounded-xl shadow-sm border mb-6" style={{ borderColor: "#E5E7EB" }}>
+        <div
+          className="bg-white rounded-xl shadow-sm border mb-6"
+          style={{ borderColor: "#E5E7EB" }}
+        >
           <div className="flex border-b" style={{ borderColor: "#E5E7EB" }}>
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex-1 px-6 py-4 text-sm font-semibold transition ${
-                  activeTab === tab.id
-                    ? "border-b-2"
-                    : "hover:bg-gray-50"
+                  activeTab === tab.id ? "border-b-2" : "hover:bg-gray-50"
                 }`}
                 style={{
-                  borderBottomColor: activeTab === tab.id ? "#042B19" : "transparent",
+                  borderBottomColor:
+                    activeTab === tab.id ? "#042B19" : "transparent",
                   color: activeTab === tab.id ? "#042B19" : "#6B7280",
                 }}
               >
@@ -230,23 +252,45 @@ export default function BinaryGenealogyPage() {
         <div className="space-y-6">
           {/* Binary Tree Tab */}
           {activeTab === "tree" && (
-            <div className="bg-white rounded-xl shadow-sm p-6 border" style={{ borderColor: "#E5E7EB" }}>
+            <div
+              className="bg-white rounded-xl shadow-sm p-6 border"
+              style={{ borderColor: "#E5E7EB" }}
+            >
               <div className="mb-6">
-                <h2 className="text-xl font-semibold mb-2" style={{ color: "#042B19" }}>
+                <h2
+                  className="text-xl font-semibold mb-2"
+                  style={{ color: "#042B19" }}
+                >
                   Binary Tree Structure
                 </h2>
                 <div className="flex items-center gap-6 text-sm">
                   <div className="flex items-center gap-2">
-                    <ArrowLeft className="w-4 h-4" style={{ color: "#3b82f6" }} />
-                    <span className="text-gray-600">Left Business: ${leftTotal.toFixed(2)}</span>
+                    <ArrowLeft
+                      className="w-4 h-4"
+                      style={{ color: "#3b82f6" }}
+                    />
+                    <span className="text-gray-600">
+                      Left Business: ${leftTotal.toFixed(2)}
+                    </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <ArrowRight className="w-4 h-4" style={{ color: "#16a34a" }} />
-                    <span className="text-gray-600">Right Business: ${rightTotal.toFixed(2)}</span>
+                    <ArrowRight
+                      className="w-4 h-4"
+                      style={{ color: "#16a34a" }}
+                    />
+                    <span className="text-gray-600">
+                      Right Business: ${rightTotal.toFixed(2)}
+                    </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <DollarSign className="w-4 h-4" style={{ color: "#eab308" }} />
-                    <span className="font-semibold" style={{ color: "#042B19" }}>
+                    <DollarSign
+                      className="w-4 h-4"
+                      style={{ color: "#eab308" }}
+                    />
+                    <span
+                      className="font-semibold"
+                      style={{ color: "#042B19" }}
+                    >
                       Lesser Leg: ${lesserLeg.toFixed(2)}
                     </span>
                   </div>
@@ -262,67 +306,120 @@ export default function BinaryGenealogyPage() {
 
           {/* Left Members Tab */}
           {activeTab === "left" && (
-            <div className="bg-white rounded-xl shadow-sm border overflow-hidden" style={{ borderColor: "#E5E7EB" }}>
+            <div
+              className="bg-white rounded-xl shadow-sm border overflow-hidden"
+              style={{ borderColor: "#E5E7EB" }}
+            >
               <div className="p-6 border-b" style={{ borderColor: "#E5E7EB" }}>
                 <div className="flex items-center gap-2 mb-2">
                   <ArrowLeft className="w-5 h-5" style={{ color: "#3b82f6" }} />
-                  <h2 className="text-xl font-semibold" style={{ color: "#042B19" }}>
+                  <h2
+                    className="text-xl font-semibold"
+                    style={{ color: "#042B19" }}
+                  >
                     Left Members
                   </h2>
                 </div>
                 <p className="text-sm text-gray-600">
-                  Total Left Business: <span className="font-semibold">${leftTotal.toFixed(2)}</span>
+                  Total Left Business:{" "}
+                  <span className="font-semibold">${leftTotal.toFixed(2)}</span>
                 </p>
               </div>
               <div className="overflow-x-auto">
                 <table className="w-full">
                   <thead>
                     <tr style={{ backgroundColor: "#F9FAFB" }}>
-                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase" style={{ color: "#042B19" }}>
+                      <th
+                        className="px-4 py-3 text-left text-xs font-semibold uppercase"
+                        style={{ color: "#042B19" }}
+                      >
                         ID
                       </th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase" style={{ color: "#042B19" }}>
+                      <th
+                        className="px-4 py-3 text-left text-xs font-semibold uppercase"
+                        style={{ color: "#042B19" }}
+                      >
                         Name
                       </th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase" style={{ color: "#042B19" }}>
+                      <th
+                        className="px-4 py-3 text-left text-xs font-semibold uppercase"
+                        style={{ color: "#042B19" }}
+                      >
                         Level
                       </th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase" style={{ color: "#042B19" }}>
+                      <th
+                        className="px-4 py-3 text-left text-xs font-semibold uppercase"
+                        style={{ color: "#042B19" }}
+                      >
                         Investment
                       </th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase" style={{ color: "#042B19" }}>
+                      <th
+                        className="px-4 py-3 text-left text-xs font-semibold uppercase"
+                        style={{ color: "#042B19" }}
+                      >
                         Total Business
                       </th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase" style={{ color: "#042B19" }}>
+                      <th
+                        className="px-4 py-3 text-left text-xs font-semibold uppercase"
+                        style={{ color: "#042B19" }}
+                      >
                         Status
                       </th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase" style={{ color: "#042B19" }}>
+                      <th
+                        className="px-4 py-3 text-left text-xs font-semibold uppercase"
+                        style={{ color: "#042B19" }}
+                      >
                         Join Date
                       </th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y" style={{ borderColor: "#E5E7EB" }}>
+                  <tbody
+                    className="divide-y"
+                    style={{ borderColor: "#E5E7EB" }}
+                  >
                     {leftMembers.map((member, index) => (
                       <tr key={index} className="hover:bg-gray-50 transition">
-                        <td className="px-4 py-3 text-sm font-medium" style={{ color: "#042B19" }}>
+                        <td
+                          className="px-4 py-3 text-sm font-medium"
+                          style={{ color: "#042B19" }}
+                        >
                           {member.id}
                         </td>
-                        <td className="px-4 py-3 text-sm" style={{ color: "#042B19" }}>
+                        <td
+                          className="px-4 py-3 text-sm"
+                          style={{ color: "#042B19" }}
+                        >
                           {member.name}
                         </td>
-                        <td className="px-4 py-3 text-sm text-gray-600">{member.level}</td>
-                        <td className="px-4 py-3 text-sm font-semibold" style={{ color: "#16a34a" }}>
+                        <td className="px-4 py-3 text-sm text-gray-600">
+                          {member.level}
+                        </td>
+                        <td
+                          className="px-4 py-3 text-sm font-semibold"
+                          style={{ color: "#16a34a" }}
+                        >
                           {member.investment}
                         </td>
-                        <td className="px-4 py-3 text-sm font-semibold" style={{ color: "#042B19" }}>
+                        <td
+                          className="px-4 py-3 text-sm font-semibold"
+                          style={{ color: "#042B19" }}
+                        >
                           {member.totalBusiness}
                         </td>
                         <td className="px-4 py-3">
-                          <span className="inline-block px-2 py-1 rounded-full text-xs font-semibold" style={{ backgroundColor: "#DCFCE7", color: "#16a34a" }}>
+                          <span
+                            className="inline-block px-2 py-1 rounded-full text-xs font-semibold"
+                            style={{
+                              backgroundColor: "#DCFCE7",
+                              color: "#16a34a",
+                            }}
+                          >
                             {member.status}
                           </span>
                         </td>
-                        <td className="px-4 py-3 text-sm text-gray-600">{member.joinDate}</td>
+                        <td className="px-4 py-3 text-sm text-gray-600">
+                          {member.joinDate}
+                        </td>
                       </tr>
                     ))}
                   </tbody>
@@ -333,67 +430,125 @@ export default function BinaryGenealogyPage() {
 
           {/* Right Members Tab */}
           {activeTab === "right" && (
-            <div className="bg-white rounded-xl shadow-sm border overflow-hidden" style={{ borderColor: "#E5E7EB" }}>
+            <div
+              className="bg-white rounded-xl shadow-sm border overflow-hidden"
+              style={{ borderColor: "#E5E7EB" }}
+            >
               <div className="p-6 border-b" style={{ borderColor: "#E5E7EB" }}>
                 <div className="flex items-center gap-2 mb-2">
-                  <ArrowRight className="w-5 h-5" style={{ color: "#16a34a" }} />
-                  <h2 className="text-xl font-semibold" style={{ color: "#042B19" }}>
+                  <ArrowRight
+                    className="w-5 h-5"
+                    style={{ color: "#16a34a" }}
+                  />
+                  <h2
+                    className="text-xl font-semibold"
+                    style={{ color: "#042B19" }}
+                  >
                     Right Members
                   </h2>
                 </div>
                 <p className="text-sm text-gray-600">
-                  Total Right Business: <span className="font-semibold">${rightTotal.toFixed(2)}</span>
+                  Total Right Business:{" "}
+                  <span className="font-semibold">
+                    ${rightTotal.toFixed(2)}
+                  </span>
                 </p>
               </div>
               <div className="overflow-x-auto">
                 <table className="w-full">
                   <thead>
                     <tr style={{ backgroundColor: "#F9FAFB" }}>
-                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase" style={{ color: "#042B19" }}>
+                      <th
+                        className="px-4 py-3 text-left text-xs font-semibold uppercase"
+                        style={{ color: "#042B19" }}
+                      >
                         ID
                       </th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase" style={{ color: "#042B19" }}>
+                      <th
+                        className="px-4 py-3 text-left text-xs font-semibold uppercase"
+                        style={{ color: "#042B19" }}
+                      >
                         Name
                       </th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase" style={{ color: "#042B19" }}>
+                      <th
+                        className="px-4 py-3 text-left text-xs font-semibold uppercase"
+                        style={{ color: "#042B19" }}
+                      >
                         Level
                       </th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase" style={{ color: "#042B19" }}>
+                      <th
+                        className="px-4 py-3 text-left text-xs font-semibold uppercase"
+                        style={{ color: "#042B19" }}
+                      >
                         Investment
                       </th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase" style={{ color: "#042B19" }}>
+                      <th
+                        className="px-4 py-3 text-left text-xs font-semibold uppercase"
+                        style={{ color: "#042B19" }}
+                      >
                         Total Business
                       </th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase" style={{ color: "#042B19" }}>
+                      <th
+                        className="px-4 py-3 text-left text-xs font-semibold uppercase"
+                        style={{ color: "#042B19" }}
+                      >
                         Status
                       </th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase" style={{ color: "#042B19" }}>
+                      <th
+                        className="px-4 py-3 text-left text-xs font-semibold uppercase"
+                        style={{ color: "#042B19" }}
+                      >
                         Join Date
                       </th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y" style={{ borderColor: "#E5E7EB" }}>
+                  <tbody
+                    className="divide-y"
+                    style={{ borderColor: "#E5E7EB" }}
+                  >
                     {rightMembers.map((member, index) => (
                       <tr key={index} className="hover:bg-gray-50 transition">
-                        <td className="px-4 py-3 text-sm font-medium" style={{ color: "#042B19" }}>
+                        <td
+                          className="px-4 py-3 text-sm font-medium"
+                          style={{ color: "#042B19" }}
+                        >
                           {member.id}
                         </td>
-                        <td className="px-4 py-3 text-sm" style={{ color: "#042B19" }}>
+                        <td
+                          className="px-4 py-3 text-sm"
+                          style={{ color: "#042B19" }}
+                        >
                           {member.name}
                         </td>
-                        <td className="px-4 py-3 text-sm text-gray-600">{member.level}</td>
-                        <td className="px-4 py-3 text-sm font-semibold" style={{ color: "#16a34a" }}>
+                        <td className="px-4 py-3 text-sm text-gray-600">
+                          {member.level}
+                        </td>
+                        <td
+                          className="px-4 py-3 text-sm font-semibold"
+                          style={{ color: "#16a34a" }}
+                        >
                           {member.investment}
                         </td>
-                        <td className="px-4 py-3 text-sm font-semibold" style={{ color: "#042B19" }}>
+                        <td
+                          className="px-4 py-3 text-sm font-semibold"
+                          style={{ color: "#042B19" }}
+                        >
                           {member.totalBusiness}
                         </td>
                         <td className="px-4 py-3">
-                          <span className="inline-block px-2 py-1 rounded-full text-xs font-semibold" style={{ backgroundColor: "#DCFCE7", color: "#16a34a" }}>
+                          <span
+                            className="inline-block px-2 py-1 rounded-full text-xs font-semibold"
+                            style={{
+                              backgroundColor: "#DCFCE7",
+                              color: "#16a34a",
+                            }}
+                          >
                             {member.status}
                           </span>
                         </td>
-                        <td className="px-4 py-3 text-sm text-gray-600">{member.joinDate}</td>
+                        <td className="px-4 py-3 text-sm text-gray-600">
+                          {member.joinDate}
+                        </td>
                       </tr>
                     ))}
                   </tbody>
@@ -404,11 +559,20 @@ export default function BinaryGenealogyPage() {
 
           {/* Investment Flow Tab */}
           {activeTab === "flow" && (
-            <div className="bg-white rounded-xl shadow-sm border overflow-hidden" style={{ borderColor: "#E5E7EB" }}>
+            <div
+              className="bg-white rounded-xl shadow-sm border overflow-hidden"
+              style={{ borderColor: "#E5E7EB" }}
+            >
               <div className="p-6 border-b" style={{ borderColor: "#E5E7EB" }}>
                 <div className="flex items-center gap-2 mb-2">
-                  <TrendingUp className="w-5 h-5" style={{ color: "#16a34a" }} />
-                  <h2 className="text-xl font-semibold" style={{ color: "#042B19" }}>
+                  <TrendingUp
+                    className="w-5 h-5"
+                    style={{ color: "#16a34a" }}
+                  />
+                  <h2
+                    className="text-xl font-semibold"
+                    style={{ color: "#042B19" }}
+                  >
                     Investment Flow
                   </h2>
                 </div>
@@ -420,29 +584,50 @@ export default function BinaryGenealogyPage() {
                 <table className="w-full">
                   <thead>
                     <tr style={{ backgroundColor: "#F9FAFB" }}>
-                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase" style={{ color: "#042B19" }}>
+                      <th
+                        className="px-4 py-3 text-left text-xs font-semibold uppercase"
+                        style={{ color: "#042B19" }}
+                      >
                         From
                       </th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase" style={{ color: "#042B19" }}>
+                      <th
+                        className="px-4 py-3 text-left text-xs font-semibold uppercase"
+                        style={{ color: "#042B19" }}
+                      >
                         To
                       </th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase" style={{ color: "#042B19" }}>
+                      <th
+                        className="px-4 py-3 text-left text-xs font-semibold uppercase"
+                        style={{ color: "#042B19" }}
+                      >
                         Amount
                       </th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase" style={{ color: "#042B19" }}>
+                      <th
+                        className="px-4 py-3 text-left text-xs font-semibold uppercase"
+                        style={{ color: "#042B19" }}
+                      >
                         Type
                       </th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase" style={{ color: "#042B19" }}>
+                      <th
+                        className="px-4 py-3 text-left text-xs font-semibold uppercase"
+                        style={{ color: "#042B19" }}
+                      >
                         Date & Time
                       </th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y" style={{ borderColor: "#E5E7EB" }}>
+                  <tbody
+                    className="divide-y"
+                    style={{ borderColor: "#E5E7EB" }}
+                  >
                     {investmentFlow.map((flow, index) => (
                       <tr key={index} className="hover:bg-gray-50 transition">
                         <td className="px-4 py-3">
                           <div>
-                            <p className="text-sm font-medium" style={{ color: "#042B19" }}>
+                            <p
+                              className="text-sm font-medium"
+                              style={{ color: "#042B19" }}
+                            >
                               {flow.fromName}
                             </p>
                             <p className="text-xs text-gray-500">{flow.from}</p>
@@ -450,21 +635,35 @@ export default function BinaryGenealogyPage() {
                         </td>
                         <td className="px-4 py-3">
                           <div>
-                            <p className="text-sm font-medium" style={{ color: "#042B19" }}>
+                            <p
+                              className="text-sm font-medium"
+                              style={{ color: "#042B19" }}
+                            >
                               {flow.toName}
                             </p>
                             <p className="text-xs text-gray-500">{flow.to}</p>
                           </div>
                         </td>
-                        <td className="px-4 py-3 text-sm font-semibold" style={{ color: "#16a34a" }}>
+                        <td
+                          className="px-4 py-3 text-sm font-semibold"
+                          style={{ color: "#16a34a" }}
+                        >
                           {flow.amount}
                         </td>
                         <td className="px-4 py-3">
-                          <span className="inline-block px-2 py-1 rounded text-xs font-semibold" style={{ backgroundColor: "#E8F5F0", color: "#042B19" }}>
+                          <span
+                            className="inline-block px-2 py-1 rounded text-xs font-semibold"
+                            style={{
+                              backgroundColor: "#E8F5F0",
+                              color: "#042B19",
+                            }}
+                          >
                             {flow.type}
                           </span>
                         </td>
-                        <td className="px-4 py-3 text-sm text-gray-600">{flow.date}</td>
+                        <td className="px-4 py-3 text-sm text-gray-600">
+                          {flow.date}
+                        </td>
                       </tr>
                     ))}
                   </tbody>
@@ -477,4 +676,3 @@ export default function BinaryGenealogyPage() {
     </div>
   );
 }
-

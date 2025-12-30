@@ -94,7 +94,7 @@ export default function SupportsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div>
       {/* Header */}
       <DashboardHeader 
         title="Support"
@@ -374,4 +374,3 @@ export default function SupportsPage() {
     </div>
   );
 }
-

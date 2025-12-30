@@ -104,7 +104,7 @@ export default function DashboardPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div>
           {/* Header */}
           <DashboardHeader 
             title="Dashboard"
@@ -116,7 +116,7 @@ export default function DashboardPage() {
         {/* Income Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {/* ROI Income */}
-          <div className="bg-white rounded-xl shadow-sm p-6 border" style={{ borderColor: "#E5E7EB" }}>
+          <div className="bg-white rounded-3xl shadow-sm p-6 border" style={{ borderColor: "#E5E7EB" }}>
             <div className="mb-4">
               <h3 className="text-sm font-semibold text-gray-600 mb-2">ROI INCOME</h3>
               <p className="text-3xl font-bold" style={{ color: "#042B19" }}>
@@ -130,7 +130,7 @@ export default function DashboardPage() {
           </div>
 
           {/* Referral Income */}
-          <div className="bg-white rounded-xl shadow-sm p-6 border" style={{ borderColor: "#E5E7EB" }}>
+          <div className="bg-white rounded-3xl shadow-sm p-6 border" style={{ borderColor: "#E5E7EB" }}>
             <div className="mb-4">
               <h3 className="text-sm font-semibold text-gray-600 mb-2">REFERRAL INCOME</h3>
               <p className="text-3xl font-bold" style={{ color: "#042B19" }}>
@@ -144,7 +144,7 @@ export default function DashboardPage() {
           </div>
 
           {/* Career Reward */}
-          <div className="bg-white rounded-xl shadow-sm p-6 border" style={{ borderColor: "#E5E7EB" }}>
+          <div className="bg-white rounded-3xl shadow-sm p-6 border" style={{ borderColor: "#E5E7EB" }}>
             <div className="mb-4">
               <h3 className="text-sm font-semibold text-gray-600 mb-2">CAREER REWARD</h3>
               <p className="text-3xl font-bold" style={{ color: "#042B19" }}>
@@ -158,7 +158,7 @@ export default function DashboardPage() {
           </div>
 
           {/* Matching Income */}
-          <div className="bg-white rounded-xl shadow-sm p-6 border" style={{ borderColor: "#E5E7EB" }}>
+          <div className="bg-white rounded-3xl shadow-sm p-6 border" style={{ borderColor: "#E5E7EB" }}>
             <div className="mb-4">
               <h3 className="text-sm font-semibold text-gray-600 mb-2">MATCHING INCOME</h3>
               <p className="text-3xl font-bold" style={{ color: "#042B19" }}>
@@ -179,7 +179,7 @@ export default function DashboardPage() {
             return (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-sm p-6 border hover:shadow-md transition cursor-pointer"
+                className="bg-white rounded-3xl shadow-sm p-6 border hover:shadow-md transition cursor-pointer"
                 style={{ borderColor: "#E5E7EB" }}
               >
                 <div className="flex items-start justify-between mb-4">
@@ -208,7 +208,7 @@ export default function DashboardPage() {
         {/* Wallet Overview and Settings Row */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
           {/* Wallet Overview */}
-          <div className="bg-white rounded-xl shadow-sm p-6 border" style={{ borderColor: "#E5E7EB" }}>
+          <div className="bg-white rounded-3xl shadow-sm p-6 border" style={{ borderColor: "#E5E7EB" }}>
             <h2 className="text-xl font-semibold mb-6" style={{ color: "#042B19" }}>
               Wallet Overview
             </h2>
@@ -247,7 +247,7 @@ export default function DashboardPage() {
           </div>
 
           {/* Wallet Settings */}
-          <div className="bg-white rounded-xl shadow-sm p-6 border" style={{ borderColor: "#E5E7EB" }}>
+          <div className="bg-white rounded-3xl shadow-sm p-6 border" style={{ borderColor: "#E5E7EB" }}>
             <h2 className="text-xl font-semibold mb-6" style={{ color: "#042B19" }}>
               Wallet Settings
             </h2>
@@ -297,7 +297,7 @@ export default function DashboardPage() {
         {/* Career Progress and Referral Links Row */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
           {/* Career Progress */}
-          <div className="bg-white rounded-xl shadow-sm p-6 border" style={{ borderColor: "#E5E7EB" }}>
+          <div className="bg-white rounded-3xl shadow-sm p-6 border" style={{ borderColor: "#E5E7EB" }}>
             <div className="flex items-center gap-2 mb-6">
               <Shield className="w-5 h-5" style={{ color: "#16a34a" }} />
               <h2 className="text-xl font-semibold" style={{ color: "#042B19" }}>
@@ -343,7 +343,7 @@ export default function DashboardPage() {
           </div>
 
           {/* Referral Links */}
-          <div className="bg-white rounded-xl shadow-sm p-6 border" style={{ borderColor: "#E5E7EB" }}>
+          <div className="bg-white rounded-3xl shadow-sm p-6 border" style={{ borderColor: "#E5E7EB" }}>
             <div className="flex items-center gap-2 mb-6">
               <LinkIcon className="w-5 h-5" style={{ color: "#16a34a" }} />
               <h2 className="text-xl font-semibold" style={{ color: "#042B19" }}>
@@ -382,7 +382,7 @@ export default function DashboardPage() {
         </div>
 
         {/* Today's Earnings Chart */}
-        <div className="bg-white rounded-xl shadow-sm p-6 border" style={{ borderColor: "#E5E7EB" }}>
+        <div className="bg-white rounded-3xl shadow-sm p-6 border" style={{ borderColor: "#E5E7EB" }}>
           <div className="flex items-center justify-between mb-6">
             <div>
               <h2 className="text-xl font-semibold mb-1" style={{ color: "#042B19" }}>
@@ -595,4 +595,3 @@ function EarningsTable() {
     </div>
   );
 }
-
