@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { Edit, ChevronDown } from "lucide-react";
 import Image from "next/image";
 
@@ -13,6 +14,7 @@ export default function DashboardHeader({
   title,
   subtitle,
 }: DashboardHeaderProps) {
+  const router = useRouter();
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -90,8 +92,7 @@ export default function DashboardHeader({
                   <button
                     onClick={() => {
                       setIsProfileOpen(false);
-                      // Handle edit profile
-                      console.log("Edit profile clicked");
+                      router.push("/dashboard/profile/edit");
                     }}
                     className="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-50 transition text-left"
                   >

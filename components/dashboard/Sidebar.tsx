@@ -145,7 +145,7 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
           </Link>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="p-2 rounded-lg hover:bg-white hover:bg-opacity-10 transition text-white flex-shrink-0"
+            className="p-2 rounded-lg transition text-white flex-shrink-0"
             aria-label="Toggle sidebar"
           >
             {isOpen ? (
