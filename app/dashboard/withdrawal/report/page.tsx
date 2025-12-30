@@ -131,11 +131,10 @@ export default function WithdrawalReportPage() {
                     <select
                       value={entriesPerPage}
                       onChange={(e) => setEntriesPerPage(e.target.value)}
-                      className="px-3 py-1 border rounded text-sm focus:outline-none focus:ring-2 focus:ring-offset-0"
+                      className="px-3 py-1 border rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#042B19] focus:ring-offset-0"
                       style={{
                         borderColor: "#E5E7EB",
                         color: "#042B19",
-                        focusRingColor: "#042B19",
                       }}
                     >
                       <option value="10">10</option>
@@ -154,11 +153,10 @@ export default function WithdrawalReportPage() {
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
                         placeholder="Search..."
-                        className="pl-10 pr-4 py-1.5 border rounded text-sm focus:outline-none focus:ring-2 focus:ring-offset-0"
+                        className="pl-10 pr-4 py-1.5 border rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#042B19] focus:ring-offset-0"
                         style={{
                           borderColor: "#E5E7EB",
                           color: "#042B19",
-                          focusRingColor: "#042B19",
                         }}
                       />
                     </div>

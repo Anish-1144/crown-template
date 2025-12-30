@@ -97,11 +97,10 @@ export default function DirectGenealogyPage() {
                 placeholder="Search by name or ID..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-0 transition"
+                className="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#042B19] focus:ring-offset-0 transition"
                 style={{
                   borderColor: "#E5E7EB",
                   color: "#042B19",
-                  focusRingColor: "#042B19",
                 }}
               />
             </div>

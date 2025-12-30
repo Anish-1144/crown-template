@@ -141,11 +141,10 @@ export default function FundConvertPage() {
                     name="fromWallet"
                     value={formData.fromWallet}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border rounded-lg bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-0 transition"
+                    className="w-full px-4 py-3 border rounded-lg bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[#042B19] focus:ring-offset-0 transition"
                     style={{
                       borderColor: "#E5E7EB",
                       color: formData.fromWallet ? "#042B19" : "#9CA3AF",
-                      focusRingColor: "#042B19",
                     }}
                     required
                   >
@@ -167,11 +166,10 @@ export default function FundConvertPage() {
                     name="toWallet"
                     value={formData.toWallet}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border rounded-lg bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-0 transition"
+                    className="w-full px-4 py-3 border rounded-lg bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[#042B19] focus:ring-offset-0 transition"
                     style={{
                       borderColor: "#E5E7EB",
                       color: formData.toWallet ? "#042B19" : "#9CA3AF",
-                      focusRingColor: "#042B19",
                     }}
                     required
                   >
@@ -197,11 +195,10 @@ export default function FundConvertPage() {
                     value={formData.amount}
                     onChange={handleInputChange}
                     placeholder="Enter amount"
-                    className="w-full px-4 py-3 border rounded-lg bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-0 transition"
+                    className="w-full px-4 py-3 border rounded-lg bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[#042B19] focus:ring-offset-0 transition"
                     style={{
                       borderColor: "#E5E7EB",
                       color: "#042B19",
-                      focusRingColor: "#042B19",
                     }}
                     required
                   />

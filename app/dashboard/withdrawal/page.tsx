@@ -214,11 +214,10 @@ export default function WithdrawalPage() {
                     value={amount}
                     onChange={(e) => setAmount(e.target.value)}
                     placeholder="Enter withdrawal amount"
-                    className="w-full px-4 py-3 border rounded-lg bg-white text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-offset-0 transition"
+                    className="w-full px-4 py-3 border rounded-lg bg-white text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-[#042B19] focus:ring-offset-0 transition"
                     style={{
                       borderColor: "#E5E7EB",
                       color: "#042B19",
-                      focusRingColor: "#042B19",
                     }}
                     required
                     min="15"
@@ -336,11 +335,10 @@ export default function WithdrawalPage() {
                       <select
                         value={entriesPerPage}
                         onChange={(e) => setEntriesPerPage(e.target.value)}
-                        className="px-3 py-1 border rounded text-sm focus:outline-none focus:ring-2 focus:ring-offset-0"
+                        className="px-3 py-1 border rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#042B19] focus:ring-offset-0"
                         style={{
                           borderColor: "#E5E7EB",
                           color: "#042B19",
-                          focusRingColor: "#042B19",
                         }}
                       >
                         <option value="10">10</option>
@@ -359,11 +357,10 @@ export default function WithdrawalPage() {
                           value={searchTerm}
                           onChange={(e) => setSearchTerm(e.target.value)}
                           placeholder="Search..."
-                          className="pl-10 pr-4 py-1.5 border rounded text-sm focus:outline-none focus:ring-2 focus:ring-offset-0"
+                          className="pl-10 pr-4 py-1.5 border rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#042B19] focus:ring-offset-0"
                           style={{
                             borderColor: "#E5E7EB",
                             color: "#042B19",
-                            focusRingColor: "#042B19",
                           }}
                         />
                       </div>

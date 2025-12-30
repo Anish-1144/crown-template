@@ -124,11 +124,10 @@ export default function SupportsPage() {
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-0 transition"
+                  className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#042B19] focus:ring-offset-0 transition"
                   style={{
                     borderColor: "#E5E7EB",
                     color: "#042B19",
-                    focusRingColor: "#042B19",
                   }}
                   required
                 />
@@ -144,11 +143,10 @@ export default function SupportsPage() {
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-0 transition"
+                  className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#042B19] focus:ring-offset-0 transition"
                   style={{
                     borderColor: "#E5E7EB",
                     color: "#042B19",
-                    focusRingColor: "#042B19",
                   }}
                   required
                 />
@@ -165,11 +163,10 @@ export default function SupportsPage() {
                   onChange={handleInputChange}
                   placeholder="Describe your issue"
                   rows={5}
-                  className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-0 transition resize-none"
+                  className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#042B19] focus:ring-offset-0 transition resize-none"
                   style={{
                     borderColor: "#E5E7EB",
                     color: "#042B19",
-                    focusRingColor: "#042B19",
                   }}
                   required
                 />
@@ -287,11 +284,10 @@ export default function SupportsPage() {
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     placeholder="Search tickets..."
-                    className="pl-10 pr-4 py-1.5 border rounded text-sm focus:outline-none focus:ring-2 focus:ring-offset-0"
+                    className="pl-10 pr-4 py-1.5 border rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#042B19] focus:ring-offset-0"
                     style={{
                       borderColor: "#E5E7EB",
                       color: "#042B19",
-                      focusRingColor: "#042B19",
                     }}
                   />
                 </div>

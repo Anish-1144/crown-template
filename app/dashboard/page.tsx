@@ -274,11 +274,10 @@ export default function DashboardPage() {
               <input
                 type="text"
                 placeholder="Enter Wallet Address"
-                className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-0 transition"
+                className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#042B19] focus:ring-offset-0 transition"
                 style={{
                   borderColor: "#E5E7EB",
                   color: "#042B19",
-                  focusRingColor: "#042B19",
                 }}
               />
               <p className="text-xs text-gray-500 mt-2">

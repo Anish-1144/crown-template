@@ -231,10 +231,9 @@ export default function RegisterPage() {
                   value={formData.fullName}
                   onChange={handleChange}
                   placeholder="Enter your Name"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-offset-0 transition"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#042B19] focus:ring-offset-0 transition"
                   style={{
                     color: "#042B19",
-                    focusRingColor: "#042B19",
                   }}
                   required
                 />
@@ -256,10 +255,9 @@ export default function RegisterPage() {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Enter your email"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-offset-0 transition"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#042B19] focus:ring-offset-0 transition"
                   style={{
                     color: "#042B19",
-                    focusRingColor: "#042B19",
                   }}
                   required
                 />
@@ -280,11 +278,10 @@ export default function RegisterPage() {
                     name="country"
                     value={formData.country}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-offset-0 transition"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#042B19] focus:ring-offset-0 transition"
                     style={{
                       color: "#042B19",
                       backgroundColor: "#ffffff",
-                      focusRingColor: "#042B19",
                     }}
                     required
                   >
@@ -309,11 +306,10 @@ export default function RegisterPage() {
                     name="state"
                     value={formData.state}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-offset-0 transition"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#042B19] focus:ring-offset-0 transition"
                     style={{
                       color: "#042B19",
                       backgroundColor: "#ffffff",
-                      focusRingColor: "#042B19",
                     }}
                     required
                   >
@@ -341,11 +337,10 @@ export default function RegisterPage() {
                     name="countryCode"
                     value={formData.countryCode}
                     onChange={handleChange}
-                    className="px-2 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-offset-0 transition"
+                    className="px-2 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#042B19] focus:ring-offset-0 transition"
                     style={{
                       color: "#042B19",
                       backgroundColor: "#ffffff",
-                      focusRingColor: "#042B19",
                     }}
                   >
                     {countryCodes.map((item) => (
@@ -361,10 +356,9 @@ export default function RegisterPage() {
                     value={formData.mobileNumber}
                     onChange={handleChange}
                     placeholder="Enter a mobile"
-                    className="flex-1 px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-offset-0 transition"
+                    className="flex-1 px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#042B19] focus:ring-offset-0 transition"
                     style={{
                       color: "#042B19",
-                      focusRingColor: "#042B19",
                     }}
                     required
                   />
@@ -388,10 +382,9 @@ export default function RegisterPage() {
                     value={formData.password}
                     onChange={handleChange}
                     placeholder="Password"
-                    className="w-full px-3 py-2 pr-10 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-offset-0 transition"
+                    className="w-full px-3 py-2 pr-10 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#042B19] focus:ring-offset-0 transition"
                     style={{
                       color: "#042B19",
-                      focusRingColor: "#042B19",
                     }}
                     required
                   />
@@ -426,10 +419,9 @@ export default function RegisterPage() {
                     value={formData.confirmPassword}
                     onChange={handleChange}
                     placeholder="Confirm Password"
-                    className="w-full px-3 py-2 pr-10 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-offset-0 transition"
+                    className="w-full px-3 py-2 pr-10 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#042B19] focus:ring-offset-0 transition"
                     style={{
                       color: "#042B19",
-                      focusRingColor: "#042B19",
                     }}
                     required
                   />
