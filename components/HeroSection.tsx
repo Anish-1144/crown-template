@@ -18,10 +18,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section
-      className="relative h-screen w-full flex items-center justify-center overflow-hidden"
-      style={{ paddingTop: "156px" }}
-    >
+    <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden pt-20 md:pt-28 lg:pt-36">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
@@ -39,9 +36,9 @@ export default function HeroSection() {
       </div>
 
       {/* Centered Text */}
-      <div className="relative z-10 text-center px-4 max-w-6xl mx-auto pt-12">
+      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto py-8 md:py-12">
         <h1
-          className="text-white text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight font-normal mb-6"
+          className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight font-normal mb-4 md:mb-6"
           style={{
             fontFamily: "var(--font-font4), 'Font4', sans-serif",
             textShadow:
@@ -49,17 +46,18 @@ export default function HeroSection() {
           }}
         >
           Accelerating cleaner, more
-          <br />
+          <br className="hidden sm:block" />
+          <span className="sm:hidden"> </span>
           reliable, affordable energy
         </h1>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-10 flex flex-col items-center gap-2">
+      <div className="absolute bottom-8 md:bottom-12 left-1/2 transform -translate-x-1/2 z-10 flex flex-col items-center gap-2">
         <span className="text-white text-xs tracking-widest uppercase mb-1">
           SCROLL
         </span>
-        <div className="w-px h-10 bg-white"></div>
+        <div className="w-px h-8 md:h-10 bg-white"></div>
         <svg
           className="w-4 h-4 text-white animate-bounce mt-1"
           fill="none"
@@ -78,13 +76,13 @@ export default function HeroSection() {
       {/* Play/Pause Button */}
       <button
         onClick={togglePlayPause}
-        className="absolute bottom-8 right-8 z-10 w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center transition-all duration-300 hover:bg-[#ffcf0B]"
+        className="absolute bottom-4 right-4 md:bottom-8 md:right-8 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center transition-all duration-300 hover:bg-[#ffcf0B]"
         aria-label={isPlaying ? "Pause video" : "Play video"}
       >
         {isPlaying ? (
           // Pause icon (two vertical lines)
           <svg
-            className="w-5 h-5 text-white"
+            className="w-4 h-4 md:w-5 md:h-5 text-white"
             fill="currentColor"
             viewBox="0 0 24 24"
           >
@@ -93,7 +91,7 @@ export default function HeroSection() {
         ) : (
           // Play icon (triangle)
           <svg
-            className="w-5 h-5 text-white"
+            className="w-4 h-4 md:w-5 md:h-5 text-white"
             fill="currentColor"
             viewBox="0 0 24 24"
           >

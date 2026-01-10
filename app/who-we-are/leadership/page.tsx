@@ -50,12 +50,9 @@ export default function LeadershipPage() {
   ];
 
   return (
-    <main
-      className="min-h-screen w-full overflow-x-hidden"
-      style={{ paddingTop: "156px" }}
-    >
+    <main className="min-h-screen w-full overflow-x-hidden pt-24 sm:pt-28 md:pt-32 lg:pt-[126px]">
       {/* Hero Section */}
-      <section className="relative w-full h-[60vh] md:h-[70vh] overflow-hidden">
+      <section className="relative w-full h-[50vh] sm:h-[55vh] md:h-[60vh] lg:h-[70vh] overflow-hidden">
         <Image
           src="/about-hero.webp"
           alt="Leadership - Our Team"
@@ -66,10 +63,13 @@ export default function LeadershipPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900/20 to-transparent"></div>
         {/* Hero Text Overlay */}
         <div className="absolute inset-0 flex items-center">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="max-w-2xl bg-white p-8 md:p-10 lg:p-12">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="h-px w-12" style={{ backgroundColor: "#042B19" }}></div>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-2xl bg-white p-6 sm:p-8 md:p-10 lg:p-12">
+              <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
+                <div
+                  className="h-px w-8 sm:w-12"
+                  style={{ backgroundColor: "#042B19" }}
+                ></div>
                 <span
                   className="text-xs font-medium uppercase tracking-wide"
                   style={{ color: "#042B19" }}
@@ -78,7 +78,7 @@ export default function LeadershipPage() {
                 </span>
               </div>
               <h1
-                className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-6"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-normal leading-tight mb-4 sm:mb-6"
                 style={{
                   color: "#042B19",
                   fontFamily: "var(--font-font4), sans-serif",
@@ -92,13 +92,16 @@ export default function LeadershipPage() {
       </section>
 
       {/* Leadership Team Section */}
-      <section className="relative w-full bg-white py-16 md:py-20 lg:py-24">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="relative w-full bg-white py-12 sm:py-16 md:py-20 lg:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             {/* Section Header */}
-            <div className="text-center mb-12 md:mb-16">
-              <div className="flex items-center justify-center gap-3 mb-6">
-                <div className="h-px w-12" style={{ backgroundColor: "#042B19" }}></div>
+            <div className="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16 px-2">
+              <div className="flex items-center justify-center gap-2 sm:gap-3 mb-4 sm:mb-6">
+                <div
+                  className="h-px w-8 sm:w-12"
+                  style={{ backgroundColor: "#042B19" }}
+                ></div>
                 <span
                   className="text-xs font-medium uppercase tracking-wide"
                   style={{ color: "#042B19" }}
@@ -107,7 +110,7 @@ export default function LeadershipPage() {
                 </span>
               </div>
               <h2
-                className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal leading-tight mb-6"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal leading-tight mb-4 sm:mb-6 px-2"
                 style={{
                   color: "#042B19",
                   fontFamily: "var(--font-font4), sans-serif",
@@ -116,7 +119,7 @@ export default function LeadershipPage() {
                 Unified by our vision. Led by our experience.
               </h2>
               <p
-                className="text-base md:text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto"
+                className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto px-2"
                 style={{
                   color: "#042B19",
                   fontFamily: "var(--font-font4), sans-serif",
@@ -129,14 +132,14 @@ export default function LeadershipPage() {
             </div>
 
             {/* Leaders Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
               {leaders.map((leader) => (
                 <div
                   key={leader.id}
                   className="flex flex-col bg-white overflow-hidden border border-gray-200"
                 >
                   {/* Leader Image */}
-                  <div className="relative w-full h-[400px] md:h-[450px] lg:h-[500px] overflow-hidden">
+                  <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[500px] overflow-hidden">
                     <Image
                       src={leader.image}
                       alt={leader.name}
@@ -145,7 +148,7 @@ export default function LeadershipPage() {
                     />
                     {/* Green Banner Overlay */}
                     <div
-                      className="absolute top-4 left-4 px-3 py-1"
+                      className="absolute top-2 sm:top-3 md:top-4 left-2 sm:left-3 md:left-4 px-2 sm:px-3 py-1"
                       style={{ backgroundColor: "#042B19" }}
                     >
                       <span className="text-xs font-medium uppercase tracking-wide text-white">
@@ -153,9 +156,9 @@ export default function LeadershipPage() {
                       </span>
                     </div>
                     {/* Large Text Overlay */}
-                    <div className="absolute bottom-8 left-4 right-4">
+                    <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-2 sm:left-3 md:left-4 right-2 sm:right-3 md:right-4">
                       <h3
-                        className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-2"
+                        className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight mb-1 sm:mb-2"
                         style={{
                           fontFamily: "var(--font-font4), sans-serif",
                           textShadow: "2px 2px 4px rgba(0,0,0,0.5)",
@@ -164,7 +167,7 @@ export default function LeadershipPage() {
                         {leader.name.split(" ")[0]}
                       </h3>
                       <p
-                        className="text-xl md:text-2xl font-medium text-white"
+                        className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-white"
                         style={{
                           fontFamily: "var(--font-font4), sans-serif",
                           textShadow: "2px 2px 4px rgba(0,0,0,0.5)",
@@ -176,15 +179,15 @@ export default function LeadershipPage() {
                   </div>
 
                   {/* Leader Info */}
-                  <div className="p-6 md:p-8 flex-1 flex flex-col bg-white">
+                  <div className="p-4 sm:p-6 md:p-8 flex-1 flex flex-col bg-white">
                     <h4
-                      className="text-xl md:text-2xl font-bold mb-4"
+                      className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4"
                       style={{ color: "#042B19" }}
                     >
                       {leader.title}
                     </h4>
                     <p
-                      className="text-sm md:text-base leading-relaxed mb-6 flex-1"
+                      className="text-sm sm:text-base leading-relaxed mb-4 sm:mb-6 flex-1"
                       style={{
                         color: "#042B19",
                         fontFamily: "var(--font-font4), sans-serif",
@@ -193,16 +196,16 @@ export default function LeadershipPage() {
                       {leader.description}
                     </p>
                     {/* Yellow Read Button */}
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-2 sm:gap-3">
                       <button
-                        className="w-12 h-12 rounded-full flex items-center justify-center transition hover:scale-110"
+                        className="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center transition hover:scale-110 flex-shrink-0"
                         style={{ backgroundColor: "#ffcf0B" }}
                         aria-label="View Profile"
                       >
-                        <ArrowRight className="w-6 h-6 text-gray-900" />
+                        <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 text-gray-900" />
                       </button>
                       <span
-                        className="text-sm font-medium uppercase tracking-wide"
+                        className="text-xs sm:text-sm font-medium uppercase tracking-wide"
                         style={{ color: "#042B19" }}
                       >
                         VIEW PROFILE
@@ -217,7 +220,7 @@ export default function LeadershipPage() {
       </section>
 
       {/* Diversity & Inclusion Section */}
-      <section className="relative w-full py-16 md:py-20 lg:py-24 overflow-hidden">
+      <section className="relative w-full py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
         <div
           className="absolute inset-0"
           style={{ backgroundColor: "#042B19" }}
@@ -260,22 +263,22 @@ export default function LeadershipPage() {
             />
           </svg>
         </div>
-        <div className="container mx-auto px-4 lg:px-8 relative z-10">
-          <div className="max-w-5xl mx-auto text-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-5xl mx-auto text-center px-2">
             <p
-              className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-relaxed mb-8"
+              className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-relaxed mb-6 sm:mb-8"
               style={{
                 color: "#ffffff",
                 fontFamily: "var(--font-font4), sans-serif",
               }}
             >
-              We believe that our colleagues power Crown Bankers&apos; success and
-              our innovative solutions are generated by the diversity of ideas
-              and perspectives that are shared by employees who bring their
-              whole self to work.
+              We believe that our colleagues power Crown Bankers&apos; success
+              and our innovative solutions are generated by the diversity of
+              ideas and perspectives that are shared by employees who bring
+              their whole self to work.
             </p>
             <p
-              className="text-lg md:text-xl lg:text-2xl leading-relaxed"
+              className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed"
               style={{
                 color: "#ffffff",
                 fontFamily: "var(--font-font4), sans-serif",
@@ -290,20 +293,20 @@ export default function LeadershipPage() {
       </section>
 
       {/* Execution Section */}
-      <section className="relative w-full bg-white py-16 md:py-20 lg:py-24">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="relative w-full bg-white py-12 sm:py-16 md:py-20 lg:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 items-center">
               {/* Left Side - Heading and Main Statement */}
-              <div className="flex flex-col">
+              <div className="flex flex-col order-2 lg:order-1">
                 <span
-                  className="text-xs font-medium uppercase tracking-wide mb-6"
+                  className="text-xs font-medium uppercase tracking-wide mb-4 sm:mb-6"
                   style={{ color: "#042B19" }}
                 >
                   EXECUTION
                 </span>
                 <h2
-                  className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight"
+                  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-normal leading-tight"
                   style={{
                     color: "#042B19",
                     fontFamily: "var(--font-font4), sans-serif",
@@ -314,9 +317,9 @@ export default function LeadershipPage() {
               </div>
 
               {/* Right Side - Description */}
-              <div className="flex flex-col">
+              <div className="flex flex-col order-1 lg:order-2">
                 <p
-                  className="text-base md:text-lg lg:text-xl leading-relaxed"
+                  className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed"
                   style={{
                     color: "#042B19",
                     fontFamily: "var(--font-font4), sans-serif",
@@ -335,22 +338,22 @@ export default function LeadershipPage() {
       </section>
 
       {/* Employee Growth Section */}
-      <section className="relative w-screen h-screen bg-[#E8F5F0]">
+      <section className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-screen bg-[#E8F5F0] overflow-hidden">
         <Image
           src="/employ-chart.png"
           alt="Employee Growth Chart"
           fill
-          className="object-cover"
+          className="object-contain sm:object-cover"
           priority
         />
       </section>
 
       {/* CTA Section */}
-      <section className="relative w-full bg-white py-16 md:py-20 lg:py-24">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="flex flex-col items-center justify-center text-center">
+      <section className="relative w-full bg-white py-12 sm:py-16 md:py-20 lg:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center justify-center text-center px-2">
             <h2
-              className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal mb-8"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal mb-6 sm:mb-8"
               style={{
                 color: "#042B19",
                 fontFamily: "var(--font-font4), sans-serif",
@@ -360,7 +363,7 @@ export default function LeadershipPage() {
             </h2>
             <Link
               href="/contact"
-              className="inline-block bg-[#ffcf0B] text-gray-900 font-bold px-8 lg:px-12 py-4 lg:py-5 text-sm md:text-base uppercase tracking-wide transition hover:opacity-90"
+              className="inline-block bg-[#ffcf0B] text-gray-900 font-bold px-6 sm:px-8 lg:px-12 py-3 sm:py-4 lg:py-5 text-xs sm:text-sm md:text-base uppercase tracking-wide transition hover:opacity-90 w-full sm:w-auto text-center"
               style={{ borderRadius: "0" }}
             >
               GET IN TOUCH

@@ -28,16 +28,13 @@ export default function ExpertiseSection() {
   }, []);
 
   return (
-    <section className="relative w-full h-screen flex flex-col">
+    <section className="relative w-full min-h-screen flex flex-col">
       {/* White Top Section - 30% */}
-      <div
-        className="relative w-full bg-white overflow-hidden"
-        style={{ height: "30vh" }}
-      >
+      <div className="relative w-full bg-white overflow-hidden py-8 md:py-12 lg:py-16">
         {/* Description Text in White Section */}
-        <div className="relative z-10 h-full flex items-center justify-center px-8 lg:px-16">
+        <div className="relative z-10 h-full flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-16">
           <p
-            className="text-center text-base md:text-lg lg:text-xl leading-relaxed max-w-4xl"
+            className="text-center text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed max-w-4xl"
             style={{
               color: "#042B19",
               fontFamily: "var(--font-font4), sans-serif",
@@ -52,10 +49,7 @@ export default function ExpertiseSection() {
       </div>
 
       {/* Light Green Bottom Section - Remaining 70% */}
-      <div
-        className="relative w-full bg-[#E8F5F0] overflow-hidden flex-1"
-        style={{ height: "70vh" }}
-      >
+      <div className="relative w-full bg-[#E8F5F0] overflow-hidden flex-1 py-8 md:py-12 lg:py-16">
         {/* SVG Background Pattern - Continuing from white section */}
         <div className="absolute inset-0 opacity-30" style={{ top: "-30vh" }}>
           <svg
@@ -832,14 +826,14 @@ export default function ExpertiseSection() {
         </div>
 
         {/* Content Grid - Text Left, Image Right */}
-        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 h-full px-8 lg:px-16 py-2 lg:py-4">
+        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 h-full px-4 sm:px-6 md:px-8 lg:px-16 py-4 md:py-6 lg:py-8">
           {/* Left Side - Text Content */}
-          <div className="flex flex-col justify-center">
-            <p className="text-gray-600 text-sm font-medium mb-1 uppercase tracking-wide">
+          <div className="flex flex-col justify-center order-2 lg:order-1">
+            <p className="text-gray-600 text-xs sm:text-sm font-medium mb-2 sm:mb-4 uppercase tracking-wide">
               EXPERTISE
             </p>
             <h2
-              className="text-5xl lg:text-6xl xl:text-7xl mb-1 leading-[1.05]"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-2 sm:mb-4 leading-[1.05]"
               style={{ color: "#042B19" }}
             >
               <span
@@ -875,7 +869,7 @@ export default function ExpertiseSection() {
               >
                 <MorphingText
                   texts={morphingWords}
-                  className="h-auto text-6xl lg:text-7xl xl:text-8xl font-bold leading-[1.05]"
+                  className="h-auto text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[1.05]"
                   style={{
                     fontFamily: "'Font3', sans-serif",
                     color: "#042B19",
@@ -899,13 +893,13 @@ export default function ExpertiseSection() {
                 at heart.
               </span>
             </h2>
-            <p className="text-gray-600 text-lg lg:text-xl xl:text-2xl max-w-lg leading-relaxed mt-2">
+            <p className="text-gray-600 text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl max-w-lg leading-relaxed mt-2 sm:mt-4">
               With the know-how and experience to rise to any challenge.
             </p>
           </div>
 
           {/* Right Side - Image */}
-          <div className="relative w-full h-full min-h-[400px] lg:min-h-[500px]">
+          <div className="relative w-full h-full min-h-[300px] sm:min-h-[400px] md:min-h-[450px] lg:min-h-[500px] order-1 lg:order-2">
             <Image
               src="/rightside.webp"
               alt="Industrial energy facility"
@@ -914,9 +908,9 @@ export default function ExpertiseSection() {
               priority
             />
             {/* Yellow Button Overlay - Bottom Left Corner */}
-            <div className="absolute bottom-0 left-0 p-4 lg:p-6">
+            <div className="absolute bottom-0 left-0 p-3 sm:p-4 md:p-5 lg:p-6">
               <button
-                className="bg-[#ffcf0B] text-gray-900 font-bold px-6 py-4 transition hover:opacity-90 text-sm uppercase tracking-wide whitespace-nowrap"
+                className="bg-[#ffcf0B] text-gray-900 font-bold px-4 sm:px-6 py-3 sm:py-4 transition hover:opacity-90 text-xs sm:text-sm uppercase tracking-wide whitespace-nowrap"
                 style={{ borderRadius: "0" }}
               >
                 SEE HOW WE WORK

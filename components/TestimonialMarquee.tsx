@@ -49,11 +49,11 @@ export default function TestimonialMarquee() {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section className="relative w-full bg-white py-16 md:py-24">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section className="relative w-full bg-white py-12 sm:py-16 md:py-20 lg:py-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <h2
-          className="text-4xl md:text-5xl lg:text-5xl font-normal mb-4"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-normal mb-6 sm:mb-8"
           style={{
             color: "#042B19",
             fontFamily: "var(--font-font4), sans-serif",
@@ -64,10 +64,10 @@ export default function TestimonialMarquee() {
 
         {/* Testimonial Card */}
         <div className="relative">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-center justify-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center justify-center">
             {/* Left Side - Image */}
-            <div className="flex justify-center">
-              <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden bg-gray-200">
+            <div className="flex justify-center order-1 lg:order-1">
+              <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full overflow-hidden bg-gray-200">
                 <Image
                   key={currentIndex}
                   src={currentTestimonial.image}
@@ -81,12 +81,12 @@ export default function TestimonialMarquee() {
             {/* Right Side - Content */}
             <div
               key={currentIndex}
-              className="space-y-4 text-center lg:text-left animate-fade-in"
+              className="space-y-3 sm:space-y-4 text-center lg:text-left animate-fade-in order-2 lg:order-2"
             >
               {/* Category */}
               <div>
                 <h3
-                  className="text-lg md:text-xl font-semibold mb-2 uppercase tracking-wide"
+                  className="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-3 uppercase tracking-wide"
                   style={{
                     color: "#042B19",
                     fontFamily: "var(--font-custom), 'CustomFont', sans-serif",
@@ -95,14 +95,14 @@ export default function TestimonialMarquee() {
                   {currentTestimonial.category}
                 </h3>
                 <div
-                  className="h-px w-20"
+                  className="h-px w-16 sm:w-20 mx-auto lg:mx-0"
                   style={{ backgroundColor: "#042B19" }}
                 ></div>
               </div>
 
               {/* Quote */}
               <p
-                className="text-lg md:text-xl lg:text-2xl leading-relaxed"
+                className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed px-2 sm:px-0"
                 style={{
                   color: "#16a34a",
                   fontFamily: "var(--font-custom), 'CustomFont', sans-serif",
@@ -112,13 +112,13 @@ export default function TestimonialMarquee() {
               </p>
 
               {/* Attribution */}
-              <div className="pt-4">
+              <div className="pt-3 sm:pt-4">
                 <div
-                  className="h-px w-full mb-4"
+                  className="h-px w-full mb-3 sm:mb-4"
                   style={{ backgroundColor: "#042B19" }}
                 ></div>
                 <p
-                  className="text-sm uppercase tracking-wide"
+                  className="text-xs sm:text-sm uppercase tracking-wide"
                   style={{
                     color: "#042B19",
                     fontFamily: "var(--font-custom), 'CustomFont', sans-serif",
@@ -127,7 +127,7 @@ export default function TestimonialMarquee() {
                   {currentTestimonial.name}
                 </p>
                 <p
-                  className="text-sm uppercase tracking-wide mt-1"
+                  className="text-xs sm:text-sm uppercase tracking-wide mt-1"
                   style={{
                     color: "#042B19",
                     fontFamily: "var(--font-custom), 'CustomFont', sans-serif",
@@ -140,13 +140,13 @@ export default function TestimonialMarquee() {
           </div>
 
           {/* Pagination */}
-          <div className="flex items-center justify-center lg:justify-start gap-3 mt-12">
+          <div className="flex items-center justify-center lg:justify-start gap-2 sm:gap-3 mt-8 sm:mt-10 md:mt-12">
             {testimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
                 className={`h-1 rounded-full transition-all duration-300 ${
-                  index === currentIndex ? "w-12" : "w-3"
+                  index === currentIndex ? "w-8 sm:w-12" : "w-2 sm:w-3"
                 }`}
                 style={{
                   backgroundColor:
@@ -155,7 +155,7 @@ export default function TestimonialMarquee() {
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}
-            <span className="text-sm text-gray-600 ml-2">
+            <span className="text-xs sm:text-sm text-gray-600 ml-2">
               {currentIndex + 1} OF {testimonials.length}
             </span>
           </div>

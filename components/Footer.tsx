@@ -3,7 +3,10 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="w-full relative overflow-hidden" style={{ backgroundColor: "#042B19" }}>
+    <footer
+      className="w-full relative overflow-hidden"
+      style={{ backgroundColor: "#042B19" }}
+    >
       {/* Footer SVG Background */}
       <div className="absolute inset-0 opacity-10">
         <Image
@@ -13,7 +16,7 @@ export default function Footer() {
           className="object-cover"
         />
       </div>
-      
+
       <div className="container mx-auto px-4 lg:px-8 py-12 lg:py-16 relative z-10">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-12">
@@ -33,7 +36,10 @@ export default function Footer() {
 
           {/* Energy Technologies */}
           <div className="flex flex-col">
-            <h4 className="font-semibold mb-4 text-sm uppercase tracking-wide" style={{ color: "#CDE5DA" }}>
+            <h4
+              className="font-semibold mb-4 text-sm uppercase tracking-wide"
+              style={{ color: "#FFFFFF", opacity: 1 }}
+            >
               Energy Technologies
             </h4>
             <ul className="space-y-3 flex-1">
@@ -41,7 +47,7 @@ export default function Footer() {
                 <Link
                   href="/energy-technologies/natural-gas"
                   className="text-sm transition hover:opacity-80"
-                  style={{ color: "#CDE5DA" }}
+                  style={{ color: "#FFFFFF", opacity: 1 }}
                 >
                   Natural Gas
                 </Link>
@@ -50,7 +56,7 @@ export default function Footer() {
                 <Link
                   href="/energy-technologies/solar"
                   className="text-sm transition hover:opacity-80"
-                  style={{ color: "#CDE5DA" }}
+                  style={{ color: "#FFFFFF", opacity: 1 }}
                 >
                   Solar
                 </Link>
@@ -59,7 +65,7 @@ export default function Footer() {
                 <Link
                   href="/energy-technologies/wind"
                   className="text-sm transition hover:opacity-80"
-                  style={{ color: "#CDE5DA" }}
+                  style={{ color: "#FFFFFF", opacity: 1 }}
                 >
                   Land-based Wind
                 </Link>
@@ -68,7 +74,7 @@ export default function Footer() {
                 <Link
                   href="/energy-technologies/storage"
                   className="text-sm transition hover:opacity-80"
-                  style={{ color: "#CDE5DA" }}
+                  style={{ color: "#FFFFFF", opacity: 1 }}
                 >
                   Storage
                 </Link>
@@ -77,7 +83,7 @@ export default function Footer() {
                 <Link
                   href="/energy-technologies/transmission"
                   className="text-sm transition hover:opacity-80"
-                  style={{ color: "#CDE5DA" }}
+                  style={{ color: "#FFFFFF", opacity: 1 }}
                 >
                   Transmission
                 </Link>
@@ -86,7 +92,7 @@ export default function Footer() {
                 <Link
                   href="/energy-technologies/geothermal"
                   className="text-sm transition hover:opacity-80"
-                  style={{ color: "#CDE5DA" }}
+                  style={{ color: "#FFFFFF", opacity: 1 }}
                 >
                   Geothermal
                 </Link>
@@ -96,7 +102,10 @@ export default function Footer() {
 
           {/* Who We Are */}
           <div className="flex flex-col">
-            <h4 className="font-semibold mb-4 text-sm uppercase tracking-wide" style={{ color: "#CDE5DA" }}>
+            <h4
+              className="font-semibold mb-4 text-sm uppercase tracking-wide"
+              style={{ color: "#FFFFFF", opacity: 1 }}
+            >
               Who We Are
             </h4>
             <ul className="space-y-3 flex-1">
@@ -104,7 +113,7 @@ export default function Footer() {
                 <Link
                   href="/who-we-are/about"
                   className="text-sm transition hover:opacity-80"
-                  style={{ color: "#CDE5DA" }}
+                  style={{ color: "#FFFFFF", opacity: 1 }}
                 >
                   About Us
                 </Link>
@@ -113,7 +122,7 @@ export default function Footer() {
                 <Link
                   href="/who-we-are/leadership"
                   className="text-sm transition hover:opacity-80"
-                  style={{ color: "#CDE5DA" }}
+                  style={{ color: "#FFFFFF", opacity: 1 }}
                 >
                   Leadership
                 </Link>
@@ -123,35 +132,29 @@ export default function Footer() {
 
           {/* Our Plan */}
           <div className="flex flex-col">
-            <h4 className="font-semibold mb-4 text-sm uppercase tracking-wide" style={{ color: "#CDE5DA" }}>
+            <h4
+              className="font-semibold mb-4 text-sm uppercase tracking-wide"
+              style={{ color: "#FFFFFF", opacity: 1 }}
+            >
               Our Plan
             </h4>
             <ul className="space-y-3 flex-1">
               <li>
                 <Link
+                  href="/our-plan"
+                  className="text-sm transition hover:opacity-80"
+                  style={{ color: "#FFFFFF", opacity: 1 }}
+                >
+                  Our Plan
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/our-plan/overview"
                   className="text-sm transition hover:opacity-80"
-                  style={{ color: "#CDE5DA" }}
+                  style={{ color: "#FFFFFF", opacity: 1 }}
                 >
                   Overview
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/our-plan/strategy"
-                  className="text-sm transition hover:opacity-80"
-                  style={{ color: "#CDE5DA" }}
-                >
-                  Strategy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/our-plan/roadmap"
-                  className="text-sm transition hover:opacity-80"
-                  style={{ color: "#CDE5DA" }}
-                >
-                  Roadmap
                 </Link>
               </li>
             </ul>
@@ -159,7 +162,10 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="flex flex-col">
-            <h4 className="font-semibold mb-4 text-sm uppercase tracking-wide" style={{ color: "#CDE5DA" }}>
+            <h4
+              className="font-semibold mb-4 text-sm uppercase tracking-wide"
+              style={{ color: "#FFFFFF", opacity: 1 }}
+            >
               Quick Links
             </h4>
             <ul className="space-y-3 flex-1">
@@ -167,7 +173,7 @@ export default function Footer() {
                 <Link
                   href="/download"
                   className="text-sm transition hover:opacity-80"
-                  style={{ color: "#CDE5DA" }}
+                  style={{ color: "#FFFFFF", opacity: 1 }}
                 >
                   Download
                 </Link>
@@ -176,7 +182,7 @@ export default function Footer() {
                 <Link
                   href="/contact"
                   className="text-sm transition hover:opacity-80"
-                  style={{ color: "#CDE5DA" }}
+                  style={{ color: "#FFFFFF", opacity: 1 }}
                 >
                   Contact Us
                 </Link>
@@ -185,7 +191,7 @@ export default function Footer() {
                 <Link
                   href="/faq"
                   className="text-sm transition hover:opacity-80"
-                  style={{ color: "#CDE5DA" }}
+                  style={{ color: "#FFFFFF", opacity: 1 }}
                 >
                   FAQ
                 </Link>
@@ -194,7 +200,7 @@ export default function Footer() {
                 <Link
                   href="/sitemap"
                   className="text-sm transition hover:opacity-80"
-                  style={{ color: "#CDE5DA" }}
+                  style={{ color: "#FFFFFF", opacity: 1 }}
                 >
                   Sitemap
                 </Link>
@@ -204,45 +210,61 @@ export default function Footer() {
         </div>
 
         {/* Crown Banker Section */}
-        <div className="border-t pt-8 mb-8" style={{ borderColor: "#CDE5DA", opacity: 0.3 }}>
+        <div
+          className="border-t pt-8 mb-8"
+          style={{ borderColor: "#CDE5DA", opacity: 0.3 }}
+        >
           <div className="flex flex-col md:flex-row flex-wrap gap-6 md:gap-8 lg:gap-12 items-start md:items-center">
             <div className="text-white">
-              <div className="text-2xl font-bold mb-2">Crown Banker</div>
-              <p className="text-sm">
-                Bridging renewable energy and financial solutions for a sustainable future.
+              <div
+                className="text-2xl font-bold mb-2 text-white"
+                style={{ opacity: 1 }}
+              >
+                Crown Banker
+              </div>
+              <p className="text-sm text-white" style={{ opacity: 1 }}>
+                Bridging renewable energy and financial solutions for a
+                sustainable future.
               </p>
             </div>
           </div>
         </div>
 
         {/* Bottom Section - Copyright and Legal */}
-        <div className="border-t pt-6" style={{ borderColor: "#CDE5DA", opacity: 0.3 }}>
+        <div
+          className="border-t pt-6"
+          style={{ borderColor: "#CDE5DA", opacity: 0.3 }}
+        >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-white text-sm">
+            <div className="text-white text-sm" style={{ opacity: 1 }}>
               © 2025 Crown Banker
             </div>
             <div className="flex flex-wrap items-center gap-6">
               <Link
                 href="/privacy"
                 className="text-white text-sm transition hover:opacity-80"
+                style={{ opacity: 1 }}
               >
                 Privacy
               </Link>
               <Link
                 href="/terms"
                 className="text-white text-sm transition hover:opacity-80"
+                style={{ opacity: 1 }}
               >
                 Terms of Service
               </Link>
               <Link
                 href="/compliance"
                 className="text-white text-sm transition hover:opacity-80"
+                style={{ opacity: 1 }}
               >
                 Compliance
               </Link>
               <Link
                 href="/cookie-preferences"
                 className="text-white text-sm transition hover:opacity-80"
+                style={{ opacity: 1 }}
               >
                 Cookie Preferences
               </Link>
@@ -251,6 +273,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white transition hover:opacity-80"
+                style={{ opacity: 1 }}
                 aria-label="Facebook"
               >
                 <svg
@@ -268,4 +291,3 @@ export default function Footer() {
     </footer>
   );
 }
-

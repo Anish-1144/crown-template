@@ -35,13 +35,13 @@ function NaturalGasMarquee() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full overflow-hidden bg-white pt-16 md:pt-24 pb-8 md:pb-12"
+      className="relative w-full overflow-hidden bg-white pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-6 sm:pb-8 md:pb-10 lg:pb-12"
     >
       <div className={`flex ${isVisible ? "animate-scroll" : ""}`}>
         {items.map((item, index) => (
           <div key={index} className="flex items-center whitespace-nowrap">
             <span
-              className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold uppercase tracking-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold uppercase tracking-tight"
               style={{
                 color: "#042B19",
                 fontFamily: "var(--font-custom), 'CustomFont', sans-serif",
@@ -52,7 +52,7 @@ function NaturalGasMarquee() {
               {item}
             </span>
             <span
-              className="mx-8 md:mx-12 text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
+              className="mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-12 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl"
               style={{ color: "#042B19" }}
             >
               ·
@@ -66,9 +66,9 @@ function NaturalGasMarquee() {
 
 export default function NaturalGasPage() {
   return (
-    <main className="min-h-screen w-full overflow-x-hidden" style={{ paddingTop: "156px" }}>
+    <main className="min-h-screen w-full overflow-x-hidden pt-24 sm:pt-28 md:pt-32 lg:pt-[126px]">
       {/* Hero Section with Background Image */}
-      <section className="relative w-full h-[60vh] md:h-[70vh] overflow-hidden">
+      <section className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] overflow-hidden">
         <Image
           src="/hero-gas.webp"
           alt="Natural Gas Energy"
@@ -83,14 +83,14 @@ export default function NaturalGasPage() {
       <NaturalGasMarquee />
 
       {/* Main Content Section */}
-      <section className="relative w-full bg-white py-12 md:py-16 lg:py-24">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+      <section className="relative w-full bg-white py-8 sm:py-12 md:py-16 lg:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
             {/* Left Column - Text Content */}
-            <div className="flex flex-col">
+            <div className="flex flex-col order-2 lg:order-1">
               {/* Breadcrumbs/Navigation */}
-              <div className="flex items-center gap-3 mb-8">
-                <div className="h-px w-12 bg-[#042B19]"></div>
+              <div className="flex items-center gap-2 sm:gap-3 mb-6 sm:mb-8 flex-wrap">
+                <div className="h-px w-8 sm:w-12 bg-[#042B19]"></div>
                 <Link
                   href="/energy-technologies"
                   className="text-xs font-medium uppercase tracking-wide hover:opacity-70 transition"
@@ -99,7 +99,7 @@ export default function NaturalGasPage() {
                   ENERGY TECHNOLOGIES
                 </Link>
                 <div className="h-4 w-px bg-gray-300"></div>
-                <Globe className="w-4 h-4" style={{ color: "#042B19" }} />
+                <Globe className="w-3 h-3 sm:w-4 sm:h-4" style={{ color: "#042B19" }} />
                 <span
                   className="text-xs font-medium uppercase tracking-wide"
                   style={{ color: "#042B19" }}
@@ -110,7 +110,7 @@ export default function NaturalGasPage() {
 
               {/* Headline */}
               <h1
-                className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-normal leading-tight mb-6 sm:mb-8"
                 style={{
                   color: "#042B19",
                   fontFamily: "var(--font-font4), sans-serif",
@@ -121,8 +121,8 @@ export default function NaturalGasPage() {
             </div>
 
             {/* Right Column - Image and Caption */}
-            <div className="flex flex-col">
-              <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] mb-6">
+            <div className="flex flex-col order-1 lg:order-2">
+              <div className="relative w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] mb-4 sm:mb-6">
                 <Image
                   src="/img1.png"
                   alt="Natural Gas Power Plant"
@@ -132,7 +132,7 @@ export default function NaturalGasPage() {
                 />
               </div>
               <p
-                className="text-base md:text-lg lg:text-xl leading-relaxed"
+                className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed"
                 style={{
                   color: "#042B19",
                   fontFamily: "var(--font-font4), sans-serif",
@@ -148,32 +148,32 @@ export default function NaturalGasPage() {
       </section>
 
       {/* Statistics Section */}
-      <section className="relative w-full bg-[#E8F5F0] py-16 md:py-20 lg:py-24">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+      <section className="relative w-full bg-[#E8F5F0] py-12 sm:py-16 md:py-20 lg:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
             {/* Left Side - Statistics */}
-            <div className="flex flex-col">
+            <div className="flex flex-col order-2 lg:order-1">
               <h2
-                className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8"
                 style={{ color: "#042B19" }}
               >
                 Our proven track record in natural gas
               </h2>
 
               {/* Statistics */}
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 {/* Stat 1 */}
                 <div>
-                  <div className="h-px bg-[#042B19] mb-4"></div>
-                  <div className="flex items-baseline gap-3">
+                  <div className="h-px bg-[#042B19] mb-3 sm:mb-4"></div>
+                  <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-3">
                     <span
-                      className="text-5xl md:text-6xl lg:text-7xl font-bold"
+                      className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold"
                       style={{ color: "#042B19" }}
                     >
                       13
                     </span>
                     <span
-                      className="text-base md:text-lg lg:text-xl"
+                      className="text-sm sm:text-base md:text-lg lg:text-xl"
                       style={{ color: "#042B19" }}
                     >
                       operational natural gas facilities
@@ -183,16 +183,16 @@ export default function NaturalGasPage() {
 
                 {/* Stat 2 */}
                 <div>
-                  <div className="h-px bg-[#042B19] mb-4"></div>
-                  <div className="flex items-baseline gap-3">
+                  <div className="h-px bg-[#042B19] mb-3 sm:mb-4"></div>
+                  <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-3">
                     <span
-                      className="text-5xl md:text-6xl lg:text-7xl font-bold"
+                      className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold"
                       style={{ color: "#042B19" }}
                     >
                       6
                     </span>
                     <span
-                      className="text-base md:text-lg lg:text-xl"
+                      className="text-sm sm:text-base md:text-lg lg:text-xl"
                       style={{ color: "#042B19" }}
                     >
                       gigawatts of power
@@ -202,16 +202,16 @@ export default function NaturalGasPage() {
 
                 {/* Stat 3 */}
                 <div>
-                  <div className="h-px bg-[#042B19] mb-4"></div>
-                  <div className="flex items-baseline gap-3">
+                  <div className="h-px bg-[#042B19] mb-3 sm:mb-4"></div>
+                  <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-3">
                     <span
-                      className="text-5xl md:text-6xl lg:text-7xl font-bold"
+                      className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold"
                       style={{ color: "#042B19" }}
                     >
                       23K
                     </span>
                     <span
-                      className="text-base md:text-lg lg:text-xl"
+                      className="text-sm sm:text-base md:text-lg lg:text-xl"
                       style={{ color: "#042B19" }}
                     >
                       gigawatt hours produced by our natural gas facilities in 2024
@@ -220,16 +220,16 @@ export default function NaturalGasPage() {
                 </div>
 
                 {/* Final line */}
-                <div className="h-px bg-[#042B19] mt-4"></div>
+                <div className="h-px bg-[#042B19] mt-3 sm:mt-4"></div>
               </div>
             </div>
 
             {/* Right Side - Illustration and CTA */}
-            <div className="relative flex flex-col items-end">
+            <div className="relative flex flex-col items-start lg:items-end order-1 lg:order-2">
               {/* CTA Link */}
               <Link
                 href="/projects"
-                className="text-sm md:text-base font-bold uppercase tracking-wide mb-8 hover:opacity-70 transition"
+                className="text-xs sm:text-sm md:text-base font-bold uppercase tracking-wide mb-6 sm:mb-8 hover:opacity-70 transition"
                 style={{
                   color: "#042B19",
                   textDecoration: "underline",
@@ -240,7 +240,7 @@ export default function NaturalGasPage() {
               </Link>
 
               {/* Line Art Illustration */}
-              <div className="relative w-full max-w-md lg:max-w-lg">
+              <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
                 <img
                   src="/gas1.svg"
                   alt="Natural Gas Industrial Complex"
@@ -253,17 +253,17 @@ export default function NaturalGasPage() {
       </section>
 
       {/* How Natural Gas Works Section */}
-      <section className="relative w-full bg-white py-16 md:py-20 lg:py-24">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="relative w-full bg-white py-12 sm:py-16 md:py-20 lg:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-center"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 sm:mb-10 md:mb-12 text-center"
             style={{ color: "#042B19" }}
           >
             How natural gas works
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16">
             {/* Left Side - Steps List */}
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-4 sm:gap-5 md:gap-6 order-2 lg:order-1">
               {[
                 {
                   number: 1,
@@ -290,9 +290,9 @@ export default function NaturalGasPage() {
                   text: "The electrical power is transmitted via transmission lines.",
                 },
               ].map((step) => (
-                <div key={step.number} className="flex items-start gap-4">
+                <div key={step.number} className="flex items-start gap-3 sm:gap-4">
                   <div
-                    className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg shadow-md"
+                    className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center font-bold text-base sm:text-lg shadow-md"
                     style={{
                       backgroundColor: "#E8F5F0",
                       color: "#042B19",
@@ -303,7 +303,7 @@ export default function NaturalGasPage() {
                     {step.number}
                   </div>
                   <p
-                    className="text-base md:text-lg lg:text-xl leading-relaxed flex-1"
+                    className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed flex-1"
                     style={{ color: "#042B19" }}
                   >
                     {step.text}
@@ -313,7 +313,7 @@ export default function NaturalGasPage() {
             </div>
 
             {/* Right Side - Diagram Illustration */}
-            <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]">
+            <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[500px] xl:h-[600px] order-1 lg:order-2 mb-4 sm:mb-0">
               <img
                 src="/gas2.webp"
                 alt="How Natural Gas Works Diagram"
@@ -325,27 +325,27 @@ export default function NaturalGasPage() {
       </section>
 
       {/* Why Natural Gas Section */}
-      <section className="relative w-full bg-gray-50 py-16 md:py-20 lg:py-24">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+      <section className="relative w-full bg-gray-50 py-12 sm:py-16 md:py-20 lg:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16">
             {/* Left Side - Text Content */}
-            <div className="flex flex-col">
+            <div className="flex flex-col order-2 lg:order-1">
               <h2
-                className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8"
                 style={{ color: "#042B19" }}
               >
                 Why natural gas
               </h2>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
+              <div className="space-y-4 sm:space-y-5 md:space-y-6">
+                <div className="flex items-start gap-3 sm:gap-4">
                   <span
-                    className="text-2xl font-bold mt-1"
+                    className="text-xl sm:text-2xl font-bold mt-0.5 sm:mt-1 flex-shrink-0"
                     style={{ color: "#042B19" }}
                   >
                     →
                   </span>
                   <p
-                    className="text-base md:text-lg lg:text-xl leading-relaxed"
+                    className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed"
                     style={{ color: "#042B19" }}
                   >
                     Fast-start peaking plants provide essential, dispatchable
@@ -354,15 +354,15 @@ export default function NaturalGasPage() {
                     this technology an additional reliability backstop.
                   </p>
                 </div>
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-3 sm:gap-4">
                   <span
-                    className="text-2xl font-bold mt-1"
+                    className="text-xl sm:text-2xl font-bold mt-0.5 sm:mt-1 flex-shrink-0"
                     style={{ color: "#042B19" }}
                   >
                     →
                   </span>
                   <p
-                    className="text-base md:text-lg lg:text-xl leading-relaxed"
+                    className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed"
                     style={{ color: "#042B19" }}
                   >
                     Combined-cycle plants offer a stable and highly efficient
@@ -378,7 +378,7 @@ export default function NaturalGasPage() {
             </div>
 
             {/* Right Side - Street Scene Illustration */}
-            <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]">
+            <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[500px] xl:h-[600px] order-1 lg:order-2 mb-4 sm:mb-0">
               <img
                 src="/gas3.svg"
                 alt="Community benefiting from natural gas energy"
@@ -390,11 +390,11 @@ export default function NaturalGasPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative w-full bg-[#E8F5F0] py-16 md:py-20 lg:py-24">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="relative w-full bg-[#E8F5F0] py-12 sm:py-16 md:py-20 lg:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center justify-center text-center">
             <h2
-              className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal mb-8"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal mb-6 sm:mb-8 px-2"
               style={{
                 color: "#042B19",
                 fontFamily: "var(--font-font4), sans-serif",
@@ -404,7 +404,7 @@ export default function NaturalGasPage() {
             </h2>
             <Link
               href="/contact"
-              className="inline-block bg-[#ffcf0B] text-gray-900 font-bold px-8 lg:px-12 py-4 lg:py-5 text-sm md:text-base uppercase tracking-wide transition hover:opacity-90"
+              className="inline-block bg-[#ffcf0B] text-gray-900 font-bold px-6 sm:px-8 lg:px-12 py-3 sm:py-4 lg:py-5 text-xs sm:text-sm md:text-base uppercase tracking-wide transition hover:opacity-90 w-full sm:w-auto text-center"
               style={{ borderRadius: "0" }}
             >
               GET IN TOUCH

@@ -31,12 +31,12 @@ export default function NewsInsightsSection() {
   ];
 
   return (
-    <section className="relative w-full bg-white py-16 md:py-24">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section className="relative w-full bg-white py-12 sm:py-16 md:py-20 lg:py-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="mb-12">
+        <div className="mb-8 sm:mb-10 md:mb-12">
           <h2
-            className="text-4xl md:text-5xl lg:text-5xl font-normal mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-normal mb-3 sm:mb-4"
             style={{
               color: "#042B19",
               fontFamily: "var(--font-font4), sans-serif",
@@ -48,16 +48,16 @@ export default function NewsInsightsSection() {
         </div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16">
           {/* Left Side - Featured Article */}
-          <div className="space-y-4">
+          <div className="space-y-3 sm:space-y-4">
             <p
-              className="text-sm font-medium uppercase tracking-wide"
+              className="text-xs sm:text-sm font-medium uppercase tracking-wide"
               style={{ color: "#042B19" }}
             >
               FEATURED
             </p>
-            <div className="relative w-full h-[300px] md:h-[350px] bg-gray-200 overflow-hidden group">
+            <div className="relative w-full h-[250px] sm:h-[300px] md:h-[350px] bg-gray-200 overflow-hidden group">
               <Image
                 src={featuredArticle.image}
                 alt={featuredArticle.headline}
@@ -67,12 +67,12 @@ export default function NewsInsightsSection() {
               />
             </div>
             <div
-              className="flex items-center gap-3 text-sm"
+              className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm"
               style={{ color: "#042B19" }}
             >
               <span>{featuredArticle.date}</span>
               <svg
-                className="w-4 h-4"
+                className="w-3 h-3 sm:w-4 sm:h-4"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -87,7 +87,7 @@ export default function NewsInsightsSection() {
               <span className="uppercase">{featuredArticle.category}</span>
             </div>
             <h3
-              className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight"
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight"
               style={{ color: "#042B19" }}
             >
               <Link
@@ -107,15 +107,15 @@ export default function NewsInsightsSection() {
                   href={`/news/${article.date
                     .toLowerCase()
                     .replace(/\s+/g, "-")}`}
-                  className="block py-6 transition-all duration-300 hover:translate-x-2 hover:opacity-80"
+                  className="block py-4 sm:py-5 md:py-6 transition-all duration-300 hover:translate-x-2 hover:opacity-80"
                 >
                   <div
-                    className="flex items-center gap-3 text-sm mb-3"
+                    className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm mb-2 sm:mb-3"
                     style={{ color: "#042B19" }}
                   >
                     <span>{article.date}</span>
                     <svg
-                      className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                      className="w-3 h-3 sm:w-4 sm:h-4 transition-transform duration-300 group-hover:translate-x-1"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -130,7 +130,7 @@ export default function NewsInsightsSection() {
                     <span className="uppercase">{article.category}</span>
                   </div>
                   <h4
-                    className="text-xl md:text-2xl font-bold leading-tight transition-colors duration-300"
+                    className="text-lg sm:text-xl md:text-2xl font-bold leading-tight transition-colors duration-300"
                     style={{ color: "#042B19" }}
                   >
                     {article.headline}

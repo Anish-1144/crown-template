@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { Phone, Mail } from "lucide-react";
+import { Phone, Mail, LogIn } from "lucide-react";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -77,11 +77,12 @@ export default function Navbar() {
             ? "-translate-y-full opacity-0 pointer-events-none h-0"
             : "translate-y-0 opacity-100"
         }`}
-        style={{ height: isScrolled ? "0" : "100px" }}
+        style={{ height: isScrolled ? "0" : "70px" }}
       >
+        {/* Desktop Version - Reduced Height */}
         <div
-          className="container mx-auto px-4 lg:px-8"
-          style={{ height: "100px" }}
+          className="hidden md:block container mx-auto px-4 lg:px-8 py-2"
+          style={{ height: "70px", minHeight: "70px" }}
         >
           <div className="flex items-center justify-between h-full">
             {/* Logo */}
@@ -90,12 +91,12 @@ export default function Navbar() {
                 src="/image.png"
                 alt="Crown Bankers Logo"
                 className="object-contain"
-                style={{ height: "84px" }}
+                style={{ height: "60px" }}
               />
             </Link>
 
-            {/* Right Side Links - Hidden on mobile */}
-            <div className="hidden md:flex items-center gap-6 lg:gap-8">
+            {/* Right Side Links */}
+            <div className="flex items-center gap-6 lg:gap-8">
               {/* Phone Number */}
               <a
                 href="tel:+447452321010"
@@ -119,12 +120,12 @@ export default function Navbar() {
               {/* Login Button */}
               <Link
                 href="/login"
-                className="text-gray-900 font-bold px-6 lg:px-8 transition hover:opacity-90 flex items-center justify-center text-xs"
+                className="text-gray-900 font-bold px-5 lg:px-6 transition hover:opacity-90 flex items-center justify-center text-xs"
                 style={{
                   backgroundColor: "#ffcf0B",
-                  height: "44px",
+                  height: "38px",
                   borderRadius: "0",
-                  minWidth: "140px",
+                  minWidth: "120px",
                 }}
               >
                 LOGIN
@@ -132,20 +133,47 @@ export default function Navbar() {
             </div>
           </div>
         </div>
+
+        {/* Mobile Version - Reduced Height */}
+        <div
+          className="md:hidden container mx-auto px-3 sm:px-4 py-1"
+          style={{ height: "40px", minHeight: "40px" }}
+        >
+          <div className="flex items-center justify-between h-full">
+            {/* Logo - Smaller on mobile */}
+            <Link href="/" className="flex items-center">
+              <img
+                src="/image.png"
+                alt="Crown Bankers Logo"
+                className="object-contain h-8 sm:h-10"
+              />
+            </Link>
+
+            {/* Mobile Login Button with Icon */}
+            <Link
+              href="/login"
+              className="flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 transition hover:opacity-90 rounded"
+              style={{
+                backgroundColor: "#ffcf0B",
+              }}
+              aria-label="Login"
+            >
+              <LogIn className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gray-900" />
+            </Link>
+          </div>
+        </div>
       </div>
 
       {/* Green Bottom Section */}
       <div
-        className={`transition-all duration-300 ease-in-out ${
+        className={`transition-all duration-300 ease-in-out relative ${
           isScrolled ? "mt-0" : "mt-0"
         }`}
-        style={{ backgroundColor: "#042B19", height: "56px" }}
+        style={{ backgroundColor: "#042B19", minHeight: "48px" }}
       >
-        <div className="container mx-auto px-4 lg:px-8">
-          <nav
-            className="flex items-center justify-between w-full"
-            style={{ height: "56px" }}
-          >
+        <div className="container mx-auto px-3 sm:px-4 lg:px-8">
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center justify-between w-full min-h-[56px]">
             {navLinks.map((link, index) => {
               const isOpen = openDropdown === link.name;
               // If link has href, it's a direct link (no dropdown)
@@ -208,7 +236,7 @@ export default function Navbar() {
                     <div
                       className="fixed left-0 right-0 w-full bg-white shadow-lg z-50"
                       style={{
-                        top: isScrolled ? "56px" : "156px",
+                        top: isScrolled ? "56px" : "126px",
                         paddingTop: "0",
                       }}
                       onMouseEnter={() => {
@@ -294,19 +322,101 @@ export default function Navbar() {
               );
             })}
           </nav>
+
+          {/* Mobile Navigation Button */}
+          <div className="md:hidden flex items-center justify-between min-h-[48px]">
+            {/* Mobile Menu Toggle Button */}
+            <button
+              onClick={() => {
+                setIsMobileMenuOpen(!isMobileMenuOpen);
+                if (isMobileMenuOpen) {
+                  setOpenDropdown(null);
+                }
+              }}
+              className="flex items-center justify-center w-8 h-8 text-white hover:text-yellow-400 transition"
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? (
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              )}
+            </button>
+
+            {/* Mobile Contact Info */}
+            <div className="flex items-center gap-3 sm:gap-4">
+              <a
+                href="tel:+447452321010"
+                className="flex items-center gap-1 text-white transition hover:text-yellow-400"
+                aria-label="Call us"
+              >
+                <Phone className="w-4 h-4" />
+              </a>
+              <a
+                href="mailto:info@crownbanker.com"
+                className="flex items-center gap-1 text-white transition hover:text-yellow-400"
+                aria-label="Email us"
+              >
+                <Mail className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation Menu */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-            isMobileMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-[#042B19] ${
+            isMobileMenuOpen
+              ? "max-h-[calc(100vh-120px)] opacity-100"
+              : "max-h-0 opacity-0"
           }`}
         >
-          <nav className="container mx-auto px-4 py-4">
+          <nav className="container mx-auto px-4 py-4 space-y-1">
             {navLinks.map((link, index) => {
               const isOpen = openDropdown === link.name;
+              // Handle direct links (no dropdown)
+              if (link.href) {
+                return (
+                  <Link
+                    key={index}
+                    href={link.href}
+                    className="block w-full text-white text-sm font-medium py-3 px-2 hover:text-yellow-400 transition border-b border-white/10"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setOpenDropdown(null);
+                    }}
+                  >
+                    {link.name}
+                  </Link>
+                );
+              }
+              // Handle dropdown links
               return (
-                <div key={index} className="mb-2">
+                <div key={index} className="border-b border-white/10">
                   <button
                     onClick={() => setOpenDropdown(isOpen ? null : link.name)}
                     className="w-full flex items-center justify-between text-white text-sm font-medium py-3 px-2 hover:text-yellow-400 transition"
@@ -329,7 +439,7 @@ export default function Navbar() {
                     </svg>
                   </button>
                   {isOpen && link.items && (
-                    <div className="pl-4 pb-2">
+                    <div className="pl-4 pb-2 bg-[#042B19]/50">
                       {link.items.map((item, idx) => (
                         <Link
                           key={idx}

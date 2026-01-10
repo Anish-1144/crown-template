@@ -40,13 +40,13 @@ function TransmissionMarquee() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full overflow-hidden bg-white pt-16 md:pt-24 pb-8 md:pb-12"
+      className="relative w-full overflow-hidden bg-white pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-6 sm:pb-8 md:pb-10 lg:pb-12"
     >
       <div className={`flex ${isVisible ? "animate-scroll" : ""}`}>
         {items.map((item, index) => (
           <div key={index} className="flex items-center whitespace-nowrap">
             <span
-              className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold uppercase tracking-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold uppercase tracking-tight"
               style={{
                 color: "#042B19",
                 fontFamily: "var(--font-custom), 'CustomFont', sans-serif",
@@ -57,7 +57,7 @@ function TransmissionMarquee() {
               {item}
             </span>
             <span
-              className="mx-8 md:mx-12 text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
+              className="mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-12 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl"
               style={{ color: "#042B19" }}
             >
               ·
@@ -71,12 +71,9 @@ function TransmissionMarquee() {
 
 export default function TransmissionPage() {
   return (
-    <main
-      className="min-h-screen w-full overflow-x-hidden"
-      style={{ paddingTop: "156px" }}
-    >
+    <main className="min-h-screen w-full overflow-x-hidden pt-24 sm:pt-28 md:pt-32 lg:pt-[126px]">
       {/* Hero Section with Background Image */}
-      <section className="relative w-full h-[60vh] md:h-[70vh] overflow-hidden">
+      <section className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] overflow-hidden">
         <Image
           src="/Transmission-hero.webp"
           alt="Transmission Infrastructure"
@@ -91,14 +88,14 @@ export default function TransmissionPage() {
       <TransmissionMarquee />
 
       {/* Main Content Section */}
-      <section className="relative w-full bg-white py-12 md:py-16 lg:py-24">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+      <section className="relative w-full bg-white py-8 sm:py-12 md:py-16 lg:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
             {/* Left Column - Text Content */}
-            <div className="flex flex-col">
+            <div className="flex flex-col order-2 lg:order-1">
               {/* Breadcrumbs/Navigation */}
-              <div className="flex items-center gap-3 mb-8">
-                <div className="h-px w-12 bg-[#042B19]"></div>
+              <div className="flex items-center gap-2 sm:gap-3 mb-6 sm:mb-8 flex-wrap">
+                <div className="h-px w-8 sm:w-12 bg-[#042B19]"></div>
                 <Link
                   href="/energy-technologies"
                   className="text-xs font-medium uppercase tracking-wide hover:opacity-70 transition"
@@ -107,7 +104,7 @@ export default function TransmissionPage() {
                   ENERGY TECHNOLOGIES
                 </Link>
                 <div className="h-4 w-px bg-gray-300"></div>
-                <Zap className="w-4 h-4" style={{ color: "#ffcf0B" }} />
+                <Zap className="w-3 h-3 sm:w-4 sm:h-4" style={{ color: "#ffcf0B" }} />
                 <span
                   className="text-xs font-medium uppercase tracking-wide"
                   style={{ color: "#042B19" }}
@@ -118,7 +115,7 @@ export default function TransmissionPage() {
 
               {/* Headline */}
               <h1
-                className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight mb-8"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-normal leading-tight mb-6 sm:mb-8"
                 style={{
                   color: "#042B19",
                   fontFamily: "var(--font-font4), sans-serif",
@@ -129,8 +126,8 @@ export default function TransmissionPage() {
             </div>
 
             {/* Right Column - Circular Image and Caption */}
-            <div className="flex flex-col">
-              <div className="relative w-full aspect-square max-w-[500px] mx-auto mb-6">
+            <div className="flex flex-col order-1 lg:order-2">
+              <div className="relative w-full aspect-square max-w-[350px] sm:max-w-[400px] md:max-w-[450px] lg:max-w-[500px] mx-auto mb-4 sm:mb-6">
                 <div className="relative w-full h-full rounded-full overflow-hidden">
                   <Image
                     src="/img3.webp"
@@ -142,7 +139,7 @@ export default function TransmissionPage() {
                 </div>
               </div>
               <p
-                className="text-base md:text-lg lg:text-xl leading-relaxed"
+                className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed"
                 style={{
                   color: "#042B19",
                   fontFamily: "var(--font-font4), sans-serif",
@@ -158,32 +155,32 @@ export default function TransmissionPage() {
       </section>
 
       {/* Statistics Section */}
-      <section className="relative w-full bg-[#E8F5F0] py-16 md:py-20 lg:py-24">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+      <section className="relative w-full bg-[#E8F5F0] py-12 sm:py-16 md:py-20 lg:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
             {/* Left Side - Statistics */}
-            <div className="flex flex-col">
+            <div className="flex flex-col order-2 lg:order-1">
               <h2
-                className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8"
                 style={{ color: "#042B19" }}
               >
                 Our proven track record in transmission
               </h2>
 
               {/* Statistics */}
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 {/* Stat 1 */}
                 <div>
-                  <div className="h-px bg-[#042B19] mb-4"></div>
-                  <div className="flex items-baseline gap-3">
+                  <div className="h-px bg-[#042B19] mb-3 sm:mb-4"></div>
+                  <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-3">
                     <span
-                      className="text-5xl md:text-6xl lg:text-7xl font-bold"
+                      className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold"
                       style={{ color: "#042B19" }}
                     >
                       15+
                     </span>
                     <span
-                      className="text-base md:text-lg lg:text-xl"
+                      className="text-sm sm:text-base md:text-lg lg:text-xl"
                       style={{ color: "#042B19" }}
                     >
                       transmission projects developed
@@ -193,16 +190,16 @@ export default function TransmissionPage() {
 
                 {/* Stat 2 */}
                 <div>
-                  <div className="h-px bg-[#042B19] mb-4"></div>
-                  <div className="flex items-baseline gap-3">
+                  <div className="h-px bg-[#042B19] mb-3 sm:mb-4"></div>
+                  <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-3">
                     <span
-                      className="text-5xl md:text-6xl lg:text-7xl font-bold"
+                      className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold"
                       style={{ color: "#042B19" }}
                     >
                       500+
                     </span>
                     <span
-                      className="text-base md:text-lg lg:text-xl"
+                      className="text-sm sm:text-base md:text-lg lg:text-xl"
                       style={{ color: "#042B19" }}
                     >
                       miles of transmission lines
@@ -212,16 +209,16 @@ export default function TransmissionPage() {
 
                 {/* Stat 3 */}
                 <div>
-                  <div className="h-px bg-[#042B19] mb-4"></div>
-                  <div className="flex items-baseline gap-3">
+                  <div className="h-px bg-[#042B19] mb-3 sm:mb-4"></div>
+                  <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-3">
                     <span
-                      className="text-5xl md:text-6xl lg:text-7xl font-bold"
+                      className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold"
                       style={{ color: "#042B19" }}
                     >
                       10+
                     </span>
                     <span
-                      className="text-base md:text-lg lg:text-xl"
+                      className="text-sm sm:text-base md:text-lg lg:text-xl"
                       style={{ color: "#042B19" }}
                     >
                       gigawatts of transmission capacity in our development
@@ -231,16 +228,16 @@ export default function TransmissionPage() {
                 </div>
 
                 {/* Final line */}
-                <div className="h-px bg-[#042B19] mt-4"></div>
+                <div className="h-px bg-[#042B19] mt-3 sm:mt-4"></div>
               </div>
             </div>
 
             {/* Right Side - Illustration and CTA */}
-            <div className="relative flex flex-col items-end">
+            <div className="relative flex flex-col items-start lg:items-end order-1 lg:order-2">
               {/* CTA Link */}
               <Link
                 href="/projects"
-                className="text-sm md:text-base font-bold uppercase tracking-wide mb-8 hover:opacity-70 transition"
+                className="text-xs sm:text-sm md:text-base font-bold uppercase tracking-wide mb-6 sm:mb-8 hover:opacity-70 transition"
                 style={{
                   color: "#042B19",
                   textDecoration: "underline",
@@ -251,7 +248,7 @@ export default function TransmissionPage() {
               </Link>
 
               {/* Line Art Illustration */}
-              <div className="relative w-full max-w-md lg:max-w-lg">
+              <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
                 <img
                   src="/Transmission1.svg"
                   alt="Transmission Infrastructure"
@@ -264,17 +261,17 @@ export default function TransmissionPage() {
       </section>
 
       {/* How Transmission Works Section */}
-      <section className="relative w-full bg-white py-16 md:py-20 lg:py-24">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="relative w-full bg-white py-12 sm:py-16 md:py-20 lg:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-center"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 sm:mb-10 md:mb-12 text-center"
             style={{ color: "#042B19" }}
           >
             How transmission works
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16">
             {/* Left Side - Steps List */}
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-4 sm:gap-5 md:gap-6 order-2 lg:order-1">
               {[
                 {
                   number: 1,
@@ -301,9 +298,9 @@ export default function TransmissionPage() {
                   text: "Transmission infrastructure enables grid reliability and renewable energy integration.",
                 },
               ].map((step) => (
-                <div key={step.number} className="flex items-start gap-4">
+                <div key={step.number} className="flex items-start gap-3 sm:gap-4">
                   <div
-                    className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg shadow-md"
+                    className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center font-bold text-base sm:text-lg shadow-md"
                     style={{
                       backgroundColor: "#E8F5F0",
                       color: "#042B19",
@@ -314,7 +311,7 @@ export default function TransmissionPage() {
                     {step.number}
                   </div>
                   <p
-                    className="text-base md:text-lg lg:text-xl leading-relaxed flex-1"
+                    className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed flex-1"
                     style={{ color: "#042B19" }}
                   >
                     {step.text}
@@ -324,7 +321,7 @@ export default function TransmissionPage() {
             </div>
 
             {/* Right Side - Diagram Illustration */}
-            <div className="relative w-full aspect-square max-w-[500px] mx-auto">
+            <div className="relative w-full aspect-square max-w-[350px] sm:max-w-[400px] md:max-w-[450px] lg:max-w-[500px] mx-auto order-1 lg:order-2 mb-4 sm:mb-0">
               <div className="relative w-full h-full rounded-full overflow-hidden">
                 <Image
                   src="/img6.webp"
@@ -339,63 +336,63 @@ export default function TransmissionPage() {
       </section>
 
       {/* Why Transmission Section */}
-      <section className="relative w-full bg-[#E8F5F0] py-16 md:py-20 lg:py-24">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+      <section className="relative w-full bg-[#E8F5F0] py-12 sm:py-16 md:py-20 lg:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16">
             {/* Left Side - Text Content */}
-            <div className="flex flex-col">
+            <div className="flex flex-col order-2 lg:order-1">
               <h2
-                className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6"
                 style={{ color: "#042B19" }}
               >
                 Why transmission
               </h2>
               <p
-                className="text-base md:text-lg lg:text-xl leading-relaxed mb-6"
+                className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mb-4 sm:mb-6"
                 style={{ color: "#042B19" }}
               >
                 Transmission infrastructure is essential for a modern, reliable
                 power grid. Transmission benefits include:
               </p>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
+              <div className="space-y-3 sm:space-y-4">
+                <div className="flex items-start gap-2 sm:gap-3">
                   <span
-                    className="text-xl flex-shrink-0"
+                    className="text-lg sm:text-xl flex-shrink-0 mt-0.5"
                     style={{ color: "#042B19" }}
                   >
                     →
                   </span>
                   <p
-                    className="text-base md:text-lg lg:text-xl leading-relaxed"
+                    className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed"
                     style={{ color: "#042B19" }}
                   >
                     Enables delivery of renewable energy from remote generation
                     sites
                   </p>
                 </div>
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-2 sm:gap-3">
                   <span
-                    className="text-xl flex-shrink-0"
+                    className="text-lg sm:text-xl flex-shrink-0 mt-0.5"
                     style={{ color: "#042B19" }}
                   >
                     →
                   </span>
                   <p
-                    className="text-base md:text-lg lg:text-xl leading-relaxed"
+                    className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed"
                     style={{ color: "#042B19" }}
                   >
                     Improves grid reliability and reduces congestion
                   </p>
                 </div>
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-2 sm:gap-3">
                   <span
-                    className="text-xl flex-shrink-0"
+                    className="text-lg sm:text-xl flex-shrink-0 mt-0.5"
                     style={{ color: "#042B19" }}
                   >
                     →
                   </span>
                   <p
-                    className="text-base md:text-lg lg:text-xl leading-relaxed"
+                    className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed"
                     style={{ color: "#042B19" }}
                   >
                     Supports economic development and energy access
@@ -405,7 +402,7 @@ export default function TransmissionPage() {
             </div>
 
             {/* Right Side - Illustration */}
-            <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]">
+            <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[500px] xl:h-[600px] order-1 lg:order-2 mb-4 sm:mb-0">
               <img
                 src="/Transmission1.svg"
                 alt="Transmission Benefits"
@@ -417,11 +414,11 @@ export default function TransmissionPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative w-full bg-[#E8F5F0] py-16 md:py-20 lg:py-24">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="relative w-full bg-[#E8F5F0] py-12 sm:py-16 md:py-20 lg:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center justify-center text-center">
             <h2
-              className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal mb-8"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal mb-6 sm:mb-8 px-2"
               style={{
                 color: "#042B19",
                 fontFamily: "var(--font-font4), sans-serif",
@@ -431,7 +428,7 @@ export default function TransmissionPage() {
             </h2>
             <Link
               href="/contact"
-              className="inline-block bg-[#ffcf0B] text-gray-900 font-bold px-8 lg:px-12 py-4 lg:py-5 text-sm md:text-base uppercase tracking-wide transition hover:opacity-90"
+              className="inline-block bg-[#ffcf0B] text-gray-900 font-bold px-6 sm:px-8 lg:px-12 py-3 sm:py-4 lg:py-5 text-xs sm:text-sm md:text-base uppercase tracking-wide transition hover:opacity-90 w-full sm:w-auto text-center"
               style={{ borderRadius: "0" }}
             >
               GET IN TOUCH

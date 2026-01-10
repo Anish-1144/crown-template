@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen w-full overflow-x-hidden" style={{ paddingTop: "156px" }}>
+    <main className="min-h-screen w-full overflow-x-hidden pt-24 sm:pt-28 md:pt-32 lg:pt-[126px]">
       {/* Hero Section */}
       <section className="relative w-full h-[60vh] md:h-[70vh] overflow-hidden">
         <Image
@@ -23,7 +23,10 @@ export default function AboutPage() {
           <div className="container mx-auto px-4 lg:px-8">
             <div className="max-w-2xl bg-white p-8 md:p-10 lg:p-12">
               <div className="flex items-center gap-3 mb-6">
-                <div className="h-px w-12" style={{ backgroundColor: "#042B19" }}></div>
+                <div
+                  className="h-px w-12"
+                  style={{ backgroundColor: "#042B19" }}
+                ></div>
                 <span
                   className="text-xs font-medium uppercase tracking-wide"
                   style={{ color: "#042B19" }}
@@ -91,7 +94,10 @@ export default function AboutPage() {
                     style={{ backgroundColor: "#ffcf0B" }}
                     aria-label="Watch Now"
                   >
-                    <Play className="w-8 h-8 md:w-10 md:h-10 text-gray-900 ml-1" fill="currentColor" />
+                    <Play
+                      className="w-8 h-8 md:w-10 md:h-10 text-gray-900 ml-1"
+                      fill="currentColor"
+                    />
                   </button>
                 </div>
               </div>
@@ -259,12 +265,12 @@ export default function AboutPage() {
       </section>
 
       {/* Employee Growth Section */}
-      <section className="relative w-screen h-screen bg-[#E8F5F0]">
+      <section className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-screen bg-[#E8F5F0] overflow-hidden">
         <Image
           src="/employ-chart.png"
           alt="Employee Growth Chart"
           fill
-          className="object-cover"
+          className="object-contain sm:object-cover"
           priority
         />
       </section>
@@ -279,7 +285,7 @@ export default function AboutPage() {
             >
               Crown Bankers Roadmap (2022 – 2028)
             </h2>
-            
+
             {/* Timeline Container */}
             <div className="relative">
               {/* Vertical Timeline Line */}
@@ -409,8 +415,8 @@ export default function AboutPage() {
                       }}
                     >
                       Completed first solar plant. Registered in New Zealand and
-                      the UK. Opened new corporate office and launching the mobile
-                      app soon.
+                      the UK. Opened new corporate office and launching the
+                      mobile app soon.
                     </p>
                   </div>
                 </div>
@@ -556,7 +562,8 @@ export default function AboutPage() {
                       </div>
                     </div>
                   </div>
-                  <div className="flex-1 bg-[#E8F5F0] p-6 md:p-8 rounded-lg border-2"
+                  <div
+                    className="flex-1 bg-[#E8F5F0] p-6 md:p-8 rounded-lg border-2"
                     style={{ borderColor: "#042B19" }}
                   >
                     <h3
@@ -573,7 +580,8 @@ export default function AboutPage() {
                       }}
                     >
                       Operate 100+ solar plants worldwide. Fully integrated
-                      smart grids and financial technology innovation leadership.
+                      smart grids and financial technology innovation
+                      leadership.
                     </p>
                   </div>
                 </div>

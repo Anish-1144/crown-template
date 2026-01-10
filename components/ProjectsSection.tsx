@@ -107,10 +107,12 @@ function Globe({ className }: { className?: string }) {
 
   return (
     <div
-      className={`absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[600px] ${className || ""}`}
+      className={`absolute inset-0 mx-auto aspect-square w-full max-w-[600px] ${
+        className || ""
+      }`}
     >
       <canvas
-        className="size-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]"
+        className="size-full opacity-0 transition-opacity duration-500 contain-[layout_paint_size]"
         ref={canvasRef}
         onPointerDown={(e) =>
           updatePointerInteraction(
@@ -131,22 +133,22 @@ function Globe({ className }: { className?: string }) {
 export default function ProjectsSection() {
   return (
     <section
-      className="relative w-full overflow-hidden py-16 md:py-24"
+      className="relative w-full overflow-hidden py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24"
       style={{ backgroundColor: "#042B19" }}
     >
-      <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-8">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16">
           {/* Left Side - Text Content */}
-          <div className="z-10 max-w-xl text-left">
+          <div className="z-10 w-full lg:max-w-xl text-left order-2 lg:order-1">
             <p
-              className="text-sm font-medium mb-4 uppercase tracking-wide"
+              className="text-xs sm:text-sm font-medium mb-3 sm:mb-4 md:mb-5 uppercase tracking-wide"
               style={{ color: "#ffffff" }}
             >
               PROJECTS
             </p>
-            <div className="space-y-2 mb-8">
+            <div className="space-y-1 sm:space-y-2 md:space-y-2.5 mb-6 sm:mb-8 md:mb-10">
               <h2
-                className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-normal leading-[1.1] sm:leading-tight break-words bg-white/10 md:bg-transparent px-4 py-3 md:px-0 md:py-0 rounded-lg md:rounded-none"
                 style={{
                   color: "#ffffff",
                   fontFamily: "var(--font-custom), 'CustomFont', sans-serif",
@@ -155,7 +157,7 @@ export default function ProjectsSection() {
                 220 projects
               </h2>
               <h2
-                className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-normal leading-[1.1] sm:leading-tight break-words bg-white/10 md:bg-transparent px-4 py-3 md:px-0 md:py-0 rounded-lg md:rounded-none"
                 style={{
                   color: "#ffffff",
                   fontFamily: "var(--font-custom), 'CustomFont', sans-serif",
@@ -164,7 +166,7 @@ export default function ProjectsSection() {
                 36 gigawatts
               </h2>
               <h2
-                className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-normal leading-[1.1] sm:leading-tight break-words bg-white/10 md:bg-transparent px-4 py-3 md:px-0 md:py-0 rounded-lg md:rounded-none"
                 style={{
                   color: "#ffffff",
                   fontFamily: "var(--font-custom), 'CustomFont', sans-serif",
@@ -175,15 +177,15 @@ export default function ProjectsSection() {
             </div>
             <Link
               href="/projects"
-              className="inline-flex items-center gap-2 text-gray-900 font-bold px-6 py-3 text-sm uppercase transition hover:opacity-90"
+              className="inline-flex items-center justify-center sm:justify-start gap-2 text-gray-900 font-bold px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 md:py-3.5 text-xs sm:text-sm uppercase transition hover:opacity-90 w-full sm:w-auto"
               style={{
                 backgroundColor: "#ffcf0B",
                 borderRadius: "0",
               }}
             >
-              SEE OUR PROJECTS
+              <span>SEE OUR PROJECTS</span>
               <svg
-                className="w-4 h-4"
+                className="w-3 h-3 sm:w-4 sm:h-4 shrink-0"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -199,12 +201,11 @@ export default function ProjectsSection() {
           </div>
 
           {/* Right Side - Globe */}
-          <div className="relative h-[400px] w-full max-w-xl md:h-[500px] flex items-center justify-center">
-            <Globe className="absolute scale-150 md:scale-125" />
+          <div className="relative h-[200px] xs:h-[220px] sm:h-[280px] md:h-[350px] lg:h-[450px] xl:h-[500px] w-full max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl flex items-center justify-center order-1 lg:order-2 mb-4 sm:mb-0">
+            <Globe className="absolute scale-[1.5] xs:scale-[1.4] sm:scale-[1.3] md:scale-[1.2] lg:scale-[1.3] xl:scale-125" />
           </div>
         </div>
       </div>
     </section>
   );
 }
-

@@ -273,20 +273,20 @@ export default function EnergyTechnologiesSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full h-screen bg-white overflow-hidden"
+      className="relative w-full min-h-screen bg-white overflow-hidden py-8 md:py-12 lg:py-16"
     >
-      <div className="container mx-auto px-4 lg:px-8 h-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 h-full items-start pt-12 lg:pt-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 h-full items-start pt-8 md:pt-12 lg:pt-16">
           {/* Left Side - Title and Image */}
-          <div className="relative z-10 flex flex-col">
+          <div className="relative z-10 flex flex-col order-2 lg:order-1">
             <p
-              className="text-xs font-medium mb-2 uppercase tracking-wide"
+              className="text-xs sm:text-sm font-medium mb-3 sm:mb-4 uppercase tracking-wide"
               style={{ color: "#042B19" }}
             >
               ENERGY TECHNOLOGIES
             </p>
             <h2
-              className="text-xl md:text-2xl lg:text-4xl font-normal leading-tight mb-6"
+              className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-normal leading-tight mb-6 md:mb-8"
               style={{
                 color: "#042B19",
                 fontFamily: "var(--font-custom), 'CustomFont', sans-serif",
@@ -296,7 +296,7 @@ export default function EnergyTechnologiesSection() {
             </h2>
 
             {/* Smaller Circular Image */}
-            <div className="relative w-full max-w-[280px] md:max-w-[320px] lg:max-w-[360px] mt-auto">
+            <div className="relative w-full max-w-[240px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[360px] mx-auto lg:mx-0 mt-6 lg:mt-auto">
               <div
                 ref={imageRef}
                 className="relative w-full aspect-square rounded-full overflow-hidden"
@@ -314,10 +314,10 @@ export default function EnergyTechnologiesSection() {
           </div>
 
           {/* Right Side - Content */}
-          <div className="relative z-10">
+          <div className="relative z-10 order-1 lg:order-2">
             {/* Introduction Text */}
             <p
-              className="text-xl leading-relaxed mb-5"
+              className="text-base sm:text-lg md:text-xl leading-relaxed mb-4 md:mb-5"
               style={{ color: "#042B19" }}
             >
               Invenergy is flexible in meeting your energy needs with a
@@ -327,14 +327,14 @@ export default function EnergyTechnologiesSection() {
               technologies.
             </p>
 
-            <div className="h-px bg-gray-300 mb-5"></div>
+            <div className="h-px bg-gray-300 mb-4 md:mb-5"></div>
 
             {/* Technology Details */}
             <div ref={textRef} key={currentIndex}>
-              <div className="flex items-center gap-3 mb-3">
-                <div className="shrink-0">{currentTech.icon}</div>
+              <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+                <div className="shrink-0 w-6 h-6 sm:w-8 sm:h-8">{currentTech.icon}</div>
                 <h3
-                  className="text-xl md:text-2xl lg:text-3xl font-bold"
+                  className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold"
                   style={{
                     color: "#042B19",
                     fontFamily: "'Font3', sans-serif",
@@ -345,7 +345,7 @@ export default function EnergyTechnologiesSection() {
                 </h3>
               </div>
               <p
-                className="text-xl leading-relaxed mb-5 max-w-[500px]"
+                className="text-base sm:text-lg md:text-xl leading-relaxed mb-4 md:mb-5 max-w-[500px]"
                 style={{
                   color: "#042B19",
                   lineHeight: "1.7",
@@ -357,14 +357,14 @@ export default function EnergyTechnologiesSection() {
                 href={`/energy-technologies/${currentTech.title
                   .toLowerCase()
                   .replace(/\s+/g, "-")}`}
-                className="inline-flex items-center gap-3 group mb-5"
+                className="inline-flex items-center gap-2 sm:gap-3 group mb-4 md:mb-5"
               >
                 <div
-                  className="w-10 h-10 rounded-full flex items-center justify-center transition-transform group-hover:scale-110"
+                  className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-transform group-hover:scale-110"
                   style={{ backgroundColor: "#ffcf0B" }}
                 >
                   <svg
-                    className="w-5 h-5"
+                    className="w-4 h-4 sm:w-5 sm:h-5"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -379,7 +379,7 @@ export default function EnergyTechnologiesSection() {
                   </svg>
                 </div>
                 <span
-                  className="text-xl font-bold uppercase tracking-wide"
+                  className="text-base sm:text-lg md:text-xl font-bold uppercase tracking-wide"
                   style={{ color: "#042B19" }}
                 >
                   LEARN MORE
@@ -387,17 +387,17 @@ export default function EnergyTechnologiesSection() {
               </Link>
             </div>
 
-            <div className="h-px bg-gray-300 mt-5"></div>
+            <div className="h-px bg-gray-300 mt-4 md:mt-5"></div>
 
             {/* Scroll Indicator */}
-            <div className="flex items-center gap-2 mt-5">
+            <div className="flex items-center gap-2 mt-4 md:mt-5">
               {technologies.map((_, index) => (
                 <div
                   key={index}
                   className={`h-1 transition-all duration-300 ${
                     index === currentIndex
-                      ? "w-12 bg-[#042B19]"
-                      : "w-3 bg-gray-300"
+                      ? "w-8 sm:w-12 bg-[#042B19]"
+                      : "w-2 sm:w-3 bg-gray-300"
                   }`}
                 />
               ))}
